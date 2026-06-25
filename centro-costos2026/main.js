@@ -21,6 +21,11 @@
       }, 120);
     }
 
+    function clearDeckHash() {
+      if (!window.location.hash || !window.history || !window.history.replaceState) return;
+      window.history.replaceState(null, document.title, window.location.pathname + window.location.search);
+    }
+
     function clampIndex(index) {
       return Math.max(0, Math.min(slides.length - 1, index));
     }
@@ -64,6 +69,9 @@
 
     function updateUi(index) {
       const current = clampIndex(index);
+      if (slides[current]) {
+        slides[current].scrollTop = 0;
+      }
       dots.forEach((dot, dotIndex) => {
         dot.classList.toggle("is-active", dotIndex === current);
       });
@@ -112,6 +120,7 @@
     });
 
     applyViewportMode();
+    clearDeckHash();
     window.addEventListener("resize", scheduleLayout, { passive: true });
     window.addEventListener("orientationchange", scheduleLayout, { passive: true });
 
@@ -120,6 +129,7 @@
         controls: false,
         progress: false,
         hash: false,
+        history: false,
         center: false,
         width: "100%",
         height: "100%",
@@ -128,7 +138,7 @@
         maxScale: 1,
         transition: "convex",
         backgroundTransition: "fade",
-        touch: true,
+        touch: !window.matchMedia("(max-width: 760px)").matches,
         overview: true,
         keyboard: {
           37: "prev",
@@ -138,7 +148,11 @@
         }
       });
 
-      Reveal.on("ready", (event) => updateUi(event.indexh || 0));
+      Reveal.on("ready", () => {
+        clearDeckHash();
+        Reveal.slide(0, 0);
+        updateUi(0);
+      });
       Reveal.on("slidechanged", (event) => updateUi(event.indexh || 0));
     } else {
       document.documentElement.classList.add("fallback");
