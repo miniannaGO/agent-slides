@@ -2641,6 +2641,7 @@
       }
 
       .reveal .slides > section {
+        padding-inline: clamp(18px, 4vw, 28px);
         padding-bottom: calc(86px + env(safe-area-inset-bottom));
         scroll-padding-bottom: calc(92px + env(safe-area-inset-bottom));
       }
@@ -2720,7 +2721,7 @@
       }
 
       .reveal .slides > section {
-        padding: 18px 12px calc(80px + env(safe-area-inset-bottom));
+        padding: 18px clamp(16px, 4.2vw, 22px) calc(80px + env(safe-area-inset-bottom));
       }
 
       .slide-shell,
@@ -2977,7 +2978,7 @@
       }
 
       .deck-ui {
-        inset: auto 10px calc(9px + env(safe-area-inset-bottom)) 10px;
+        inset: auto clamp(12px, 3.8vw, 18px) calc(9px + env(safe-area-inset-bottom)) clamp(12px, 3.8vw, 18px);
         gap: 6px;
       }
 
@@ -3028,7 +3029,7 @@
 
     @media (max-width: 430px) {
       .reveal .slides > section {
-        padding: 16px 10px calc(76px + env(safe-area-inset-bottom));
+        padding: 16px clamp(20px, 6vw, 24px) calc(76px + env(safe-area-inset-bottom));
       }
 
       .cover-content h1 {
@@ -3094,7 +3095,7 @@
       }
 
       .deck-ui {
-        inset: auto 8px calc(8px + env(safe-area-inset-bottom)) 8px;
+        inset: auto clamp(14px, 4.5vw, 18px) calc(8px + env(safe-area-inset-bottom)) clamp(14px, 4.5vw, 18px);
       }
 
       .deck-counter {
@@ -3132,6 +3133,329 @@
       .nav-btn svg {
         width: 16px;
         height: 16px;
+      }
+    }
+
+    @media (max-width: 380px) and (max-height: 780px) and (orientation: portrait) {
+      .reveal .slides > section {
+        padding: 18px 24px calc(108px + env(safe-area-inset-bottom));
+        scroll-padding-bottom: calc(118px + env(safe-area-inset-bottom));
+      }
+
+      .slide-shell,
+      .cover-shell {
+        max-width: 312px;
+        margin-inline: auto;
+      }
+
+      .slide-shell {
+        gap: 10px;
+      }
+
+      .cover-shell {
+        min-height: calc(100dvh - 146px);
+        align-content: center;
+        gap: 12px;
+      }
+
+      .slide-top,
+      .cover-content,
+      .cover-flow,
+      .cover-panel,
+      .panel,
+      .metric-stack,
+      .status-flow,
+      .dashboard,
+      .commitments,
+      .payline,
+      .flow-caption {
+        width: min(100%, 288px);
+        justify-self: center;
+      }
+
+      .split,
+      .planilla-layout,
+      .visor-layout,
+      .closing-layout,
+      .flow-layout {
+        gap: 10px;
+        justify-items: center;
+      }
+
+      .slide-cover .cover-content {
+        gap: 12px;
+      }
+
+      .slide-cover .cover-content h1 {
+        font-size: 1.98rem;
+        line-height: 0.96;
+      }
+
+      .slide-cover .cover-content p {
+        font-size: 0.8rem;
+        line-height: 1.24;
+      }
+
+      .cover-flow {
+        gap: 6px;
+      }
+
+      .cover-node {
+        min-height: 32px;
+      }
+
+      .cover-panel {
+        gap: 8px;
+        padding: 12px;
+      }
+
+      .headline {
+        gap: 7px;
+      }
+
+      .headline h1 {
+        font-size: 1.24rem;
+        line-height: 1.03;
+      }
+
+      .lead {
+        font-size: 0.74rem;
+        line-height: 1.25;
+      }
+
+      .signal-card,
+      .commitment {
+        grid-template-columns: 34px 1fr;
+        gap: 8px;
+        padding: 9px;
+      }
+
+      .signal-icon,
+      .commitment .mark {
+        width: 32px;
+        height: 32px;
+      }
+
+      .signal-icon svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .signal-card h3,
+      .status-row h3,
+      .commitment strong,
+      .caption-item strong {
+        font-size: 0.78rem;
+      }
+
+      .signal-card p,
+      .status-row p,
+      .commitment span,
+      .caption-item span,
+      .flow-node span,
+      .indicator span,
+      .pay-step span {
+        font-size: 0.66rem;
+        line-height: 1.22;
+      }
+
+      .precision-panel,
+      .snapshot-panel,
+      .record-board,
+      .visor-panel,
+      .dashboard,
+      .payment-panel {
+        padding: 10px;
+      }
+
+      .gauge {
+        min-height: 118px;
+      }
+
+      .gauge-ring {
+        width: 104px;
+        height: 104px;
+        border-width: 9px;
+      }
+
+      .gauge-ring::before {
+        inset: -9px;
+        border-width: 9px;
+      }
+
+      .gauge-core {
+        width: 74px;
+        height: 74px;
+      }
+
+      .gauge-core strong {
+        font-size: 1.2rem;
+      }
+
+      .gauge-core span {
+        font-size: 0.56rem;
+      }
+
+      .quote-band,
+      .final-call {
+        padding: 9px;
+        font-size: 0.72rem;
+        line-height: 1.22;
+      }
+
+      .status-flow,
+      .dashboard,
+      .commitments,
+      .payline {
+        gap: 7px;
+      }
+
+      .status-row,
+      .indicator {
+        padding: 8px 0;
+      }
+
+      .status-pill {
+        min-height: 28px;
+        padding: 5px 9px;
+        font-size: 0.62rem;
+      }
+
+      .indicator strong,
+      .indicator em {
+        font-size: 0.78rem;
+      }
+
+      .control-frame,
+      .visor-lens {
+        min-height: 118px;
+      }
+
+      .record-card {
+        inset: 14px;
+      }
+
+      .record-card strong,
+      .visor-word {
+        font-size: 1.3rem;
+      }
+
+      .record-card span,
+      .visor-word span,
+      .record-board p {
+        font-size: 0.64rem;
+        line-height: 1.22;
+      }
+
+      .lens-ring {
+        width: 98px;
+        height: 98px;
+        border-width: 10px;
+      }
+
+      .lens-ring::after {
+        right: -22px;
+        bottom: -16px;
+        width: 44px;
+        height: 10px;
+      }
+
+      .flow-map {
+        width: min(100%, 288px);
+        padding: 10px;
+      }
+
+      .flow-node {
+        padding: 10px;
+      }
+
+      .flow-node .tag {
+        min-height: 22px;
+        padding: 3px 7px;
+        font-size: 0.58rem;
+      }
+
+      .flow-node strong {
+        font-size: 0.86rem;
+      }
+
+      .caption-item {
+        padding: 9px;
+      }
+
+      .slide-close .slide-shell {
+        gap: 8px;
+      }
+
+      .slide-close .headline h1 {
+        font-size: 1.12rem;
+      }
+
+      .slide-close .lead {
+        font-size: 0.68rem;
+      }
+
+      .slide-close .closing-layout {
+        gap: 8px;
+      }
+
+      .slide-close .commitments {
+        gap: 6px;
+      }
+
+      .slide-close .commitment {
+        grid-template-columns: 28px 1fr;
+        padding: 8px;
+      }
+
+      .slide-close .commitment .mark {
+        width: 26px;
+        height: 26px;
+        font-size: 0.72rem;
+      }
+
+      .slide-close .commitment strong {
+        font-size: 0.72rem;
+      }
+
+      .slide-close .commitment span {
+        margin-top: 2px;
+        font-size: 0.61rem;
+      }
+
+      .slide-close .payment-panel {
+        gap: 7px;
+        padding: 9px;
+      }
+
+      .slide-close .payment-panel h3 {
+        font-size: 0.84rem;
+      }
+
+      .slide-close .payline {
+        gap: 5px;
+      }
+
+      .slide-close .pay-step {
+        grid-template-columns: 24px 1fr;
+        gap: 7px;
+        padding: 7px 8px;
+      }
+
+      .slide-close .pay-step b {
+        width: 23px;
+        height: 23px;
+        font-size: 0.62rem;
+      }
+
+      .slide-close .pay-step span,
+      .slide-close .final-call {
+        font-size: 0.61rem;
+        line-height: 1.18;
+      }
+
+      .deck-ui {
+        inset: auto 18px calc(10px + env(safe-area-inset-bottom)) 18px;
       }
     }
 
