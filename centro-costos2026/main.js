@@ -148,14 +148,15 @@ function keepOverviewVisible() {
 
 function updateDeckCounter(index) {
   if (!slideCurrent || !slideTotal) return;
-  const contentTotal = Math.max(slides.length - 1, 0);
+  const visibleIndex = index + 1;
+  const total = slides.length;
   const label =
-    index === 0 ? "Caratula" : `Diapositiva ${index} de ${contentTotal}`;
+    index === 0
+      ? `Carátula, diapositiva ${visibleIndex} de ${total}`
+      : `Diapositiva ${visibleIndex} de ${total}`;
 
-  slideCurrent.textContent =
-    index === 0 ? "00" : String(index).padStart(2, "0");
-  slideTotal.textContent =
-    index === 0 ? "caratula" : `de ${String(contentTotal).padStart(2, "0")}`;
+  slideCurrent.textContent = String(visibleIndex);
+  slideTotal.textContent = `de ${total}`;
 
   if (deckCounter) {
     deckCounter.setAttribute("aria-label", label);

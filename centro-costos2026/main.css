@@ -882,8 +882,8 @@
 
     .accounting-layout {
       display: grid;
-      grid-template-rows: 1fr auto;
-      gap: 22px;
+      grid-template-rows: 1fr;
+      gap: 0;
       height: 100%;
       align-items: center;
     }
@@ -912,8 +912,7 @@
     }
 
     .accounting-node span,
-    .accounting-core span,
-    .accounting-ledger span {
+    .accounting-core span {
       color: var(--muted);
       font-size: 0.78rem;
       font-weight: 900;
@@ -955,6 +954,24 @@
       line-height: 0.95;
     }
 
+    .accounting-core-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .accounting-core-tags b {
+      min-height: 34px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 950;
+      line-height: 1;
+    }
+
     .accounting-connector {
       position: relative;
       height: 6px;
@@ -972,29 +989,6 @@
       background: var(--amber);
       clip-path: polygon(0 0, 100% 50%, 0 100%);
       transform: translateY(-50%);
-    }
-
-    .accounting-ledger {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-
-    .accounting-ledger div {
-      display: grid;
-      gap: 5px;
-      min-height: 76px;
-      align-content: center;
-      padding: 14px 16px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--surface-soft);
-    }
-
-    .accounting-ledger b {
-      color: var(--ink);
-      font-size: 0.96rem;
-      font-weight: 950;
     }
 
     .flow-layout {
@@ -1418,11 +1412,6 @@
         font-size: 2.18rem;
       }
 
-      .slide-contabilidad .accounting-ledger div {
-        min-height: 62px;
-        padding: 11px 12px;
-      }
-
       .slide-flow .flow-map {
         min-height: 318px;
       }
@@ -1829,7 +1818,6 @@
     html[data-theme="dark"] .indicator strong,
     html[data-theme="dark"] .indicator em,
     html[data-theme="dark"] .accounting-node strong,
-    html[data-theme="dark"] .accounting-ledger b,
     html[data-theme="dark"] .caption-item strong,
     html[data-theme="dark"] .commitment strong {
       color: #f8fbff;
@@ -1840,7 +1828,6 @@
     html[data-theme="dark"] .status-row p,
     html[data-theme="dark"] .indicator span,
     html[data-theme="dark"] .accounting-node span,
-    html[data-theme="dark"] .accounting-ledger span,
     html[data-theme="dark"] .caption-item span,
     html[data-theme="dark"] .commitment span {
       color: var(--muted);
@@ -1875,8 +1862,7 @@
       background: var(--surface);
     }
 
-    html[data-theme="dark"] .accounting-node,
-    html[data-theme="dark"] .accounting-ledger div {
+    html[data-theme="dark"] .accounting-node {
       border-color: var(--line);
       background: var(--surface-soft);
     }
@@ -3889,9 +3875,6 @@
         transform: translateX(-50%) rotate(90deg);
       }
 
-      .accounting-ledger {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 640px) {
@@ -3905,8 +3888,7 @@
       }
 
       .accounting-node span,
-      .accounting-core span,
-      .accounting-ledger span {
+      .accounting-core span {
         font-size: 0.62rem;
       }
 
@@ -3918,17 +3900,10 @@
         font-size: 1.38rem;
       }
 
-      .accounting-ledger {
-        gap: 7px;
-      }
-
-      .accounting-ledger div {
-        min-height: 0;
-        padding: 10px;
-      }
-
-      .accounting-ledger b {
-        font-size: 0.78rem;
+      .accounting-core-tags b {
+        min-height: 28px;
+        padding: 7px 9px;
+        font-size: 0.62rem;
       }
     }
 
@@ -3946,12 +3921,10 @@
         font-size: 1.14rem;
       }
 
-      .accounting-ledger div {
-        padding: 8px;
-      }
-
-      .accounting-ledger b {
-        font-size: 0.66rem;
+      .accounting-core-tags b {
+        min-height: 24px;
+        padding: 6px 8px;
+        font-size: 0.56rem;
       }
     }
 
@@ -3970,10 +3943,6 @@
         font-size: 1.45rem;
       }
 
-      .accounting-ledger div {
-        min-height: 0;
-        padding: 8px 10px;
-      }
     }
 
     .reveal.overview [data-animate] {
