@@ -27,6 +27,7 @@ Reglas obligatorias:
 - Evitar profundidad tecnica innecesaria cuando la presentacion sea ejecutiva o gerencial.
 - Separar estructura, estilos y comportamiento: `index.html`, `main.css` y `main.js`.
 - Evitar codigo spaguetti dentro de `index.html`; solo se permiten enlaces a CSS/JS y marcado semantico de las diapositivas.
+- No usar atributos `style` en archivos HTML. Todo estilo, variable visual o estado de presentacion debe vivir en `main.css` o, si es comportamiento dinamico, aplicarse desde `main.js`.
 - Usar librerias por CDN si aportan valor real a presentacion, navegacion, graficos o animaciones.
 - No descargar dependencias locales salvo que el usuario lo pida explicitamente.
 - Cada presentacion debe comportarse bien en escritorio, tablet y mobile.
