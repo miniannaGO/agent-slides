@@ -35,52 +35,46 @@
               <p data-animate>
                 Un flujo ordenado mejora el cierre y protege el pago oportuno.
               </p>
-
-              <div class="cover-flow" data-animate aria-label="Flujo ejecutivo">
-                <div class="cover-sequence">
-                  <div class="cover-node cover-node-escalafon">Escalafón</div>
-                  <div class="cover-link"></div>
-                  <div class="cover-node cover-node-pit">PIT</div>
-                  <div class="cover-link"></div>
-                  <div class="cover-node cover-node-planilla">Planilla</div>
-                </div>
-                <div
-                  class="cover-branch"
-                  aria-label="Salidas paralelas desde Planilla"
-                >
-                  <div class="cover-branch-options">
-                    <div class="cover-node cover-node-contabilidad">
-                      Contabilidad
-                    </div>
-                    <div class="cover-node cover-node-planificacion">
-                      Planificación
-                    </div>
-                  </div>
-                </div>
-              </div>
             </main>
 
             <aside
-              class="cover-panel"
+              class="cover-flow"
               data-animate
-              aria-label="Resultado ejecutivo"
+              aria-label="Flujo institucional ascendente"
             >
-              <span class="cover-panel-label">Resultado ejecutivo</span>
-              <strong>1 flujo</strong>
-              <p>Dato vigente, cierre confiable y pago oportuno.</p>
-              <div class="cover-result-lines">
-                <span>
-                  <b>Escalafón / PIT</b>
-                  Información vigente
-                </span>
-                <span>
-                  <b>Planilla</b>
-                  Distribución válida
-                </span>
-                <span>
-                  <b>Contabilidad / Presupuesto</b>
-                  Control y cierre
-                </span>
+              <span class="cover-flow-label">Cadena institucional</span>
+
+              <div class="cover-branch">
+                <div class="cover-node cover-node-contabilidad">
+                  <span>Confirma</span>
+                  <strong>Contabilidad</strong>
+                </div>
+                <div class="cover-node cover-node-planificacion">
+                  <span>Visualiza</span>
+                  <strong>Planificación</strong>
+                </div>
+              </div>
+
+              <div class="cover-join" aria-hidden="true"></div>
+
+              <div class="cover-node cover-node-planilla">
+                <span>Distribuye</span>
+                <strong>Planilla</strong>
+              </div>
+              <div class="cover-link cover-link-pit" aria-hidden="true"></div>
+
+              <div class="cover-node cover-node-pit">
+                <span>Planifica</span>
+                <strong>PIT</strong>
+              </div>
+              <div
+                class="cover-link cover-link-escalafon"
+                aria-hidden="true"
+              ></div>
+
+              <div class="cover-node cover-node-escalafon">
+                <span>Actualiza</span>
+                <strong>Escalafón</strong>
               </div>
             </aside>
           </div>
