@@ -342,7 +342,8 @@ html.fallback .reveal .slides > section.fallback-visible {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 14px minmax(0, 1fr);
+  grid-template-columns: 14px auto;
+  justify-content: center;
   column-gap: 12px;
   row-gap: 3px;
   min-height: 76px;
@@ -419,7 +420,7 @@ html.fallback .reveal .slides > section.fallback-visible {
 
 .cover-link {
   justify-self: center;
-  width: 5px;
+  width: 4px;
   height: 42px;
   border-radius: 999px;
   background: rgb(var(--node-rgb));
@@ -448,22 +449,34 @@ html.fallback .reveal .slides > section.fallback-visible {
 }
 
 .cover-branch {
+  --branch-gap: 12px;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: var(--branch-gap);
   align-items: end;
 }
 
 .cover-branch::after {
   content: "";
   position: absolute;
-  right: 22%;
-  bottom: -20px;
-  left: 22%;
+  right: calc((100% - var(--branch-gap)) / 4);
+  bottom: -22px;
+  left: calc((100% - var(--branch-gap)) / 4);
   height: 4px;
   border-radius: 999px;
   background: var(--role-planilla);
+}
+
+.cover-branch .cover-node::after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 22px;
+  border-radius: 999px;
+  background: rgb(var(--node-rgb));
 }
 
 .cover-join {
@@ -479,7 +492,7 @@ html.fallback .reveal .slides > section.fallback-visible {
 }
 
 .cover-join::before {
-  top: 0;
+  top: 20px;
   bottom: 0;
   left: calc(50% - 2px);
   width: 4px;
@@ -487,7 +500,7 @@ html.fallback .reveal .slides > section.fallback-visible {
 }
 
 .cover-join::after {
-  top: calc(50% - 7px);
+  top: 13px;
   left: calc(50% - 7px);
   width: 14px;
   height: 14px;
