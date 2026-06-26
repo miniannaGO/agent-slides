@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Crear una presentacion con una caratula inicial y 6 diapositivas de contenido para explicar, a nivel totalmente gerencial entre CEOs, el flujo de un cambio de software orientado a la actualizacion de la **Nueva Distribucion Contable y Presupuestal** de las **dependencias** de la Institucion: oficinas, facultades y escuelas.
+Crear una presentacion con una caratula inicial y 7 diapositivas de contenido para explicar, a nivel totalmente gerencial entre CEOs, el flujo de un cambio de software orientado a la actualizacion de la **Nueva Distribucion Contable y Presupuestal** de las **dependencias** de la Institucion: oficinas, facultades y escuelas.
 
 La explicacion debe reducir resistencia al cambio. Debe ser concisa, visual, intuitiva, manipulable y orientada a decision ejecutiva, no tecnica. El mensaje central es que la distribucion correcta depende de un trabajo organizado, actualizado y oportuno entre las areas involucradas.
 
@@ -12,17 +12,23 @@ La nueva distribucion funciona como una cadena de informacion por instantes. Cad
 
 La explicacion debe insistir en la idea de avance por tramos, como un flujo continuo:
 
-**PIT actualizado -> Planilla cerrada -> Distribucion de planilla -> Contabilidad -> Presupuesto / Planificacion**
+**Escalafon actualizado -> PIT actualizado -> Planilla cerrada -> Distribucion de planilla -> Contabilidad -> Presupuesto / Planificacion**
 
 ## Procesos macro involucrados
 
-### 1. PIT y trabajo individual docente
+### 1. Escalafon y datos del trabajador
+
+El **Escalafon** es una base de informacion donde se administra informacion clave de los trabajadores, como cargo y oficina o dependencia de trabajo.
+
+Mensaje ejecutivo: si el cargo, oficina o dependencia del trabajador no estan correctamente actualizados, el PIT y Planilla pueden tomar informacion desactualizada y la distribucion pierde precision.
+
+### 2. PIT y trabajo individual docente
 
 El **PIT (Trabajo Individual)** es la base inicial para el caso particular de docentes a tiempo completo. Su informacion se integra al calculo de distribucion junto con el empadronamiento existente de componentes de planilla versus cuentas contables.
 
 Mensaje ejecutivo: si el PIT no esta administrado, completo y actualizado a tiempo, la distribucion de docentes y dependencias pierde precision.
 
-### 2. RRHH / Remuneraciones / Planilla
+### 3. RRHH / Remuneraciones / Planilla
 
 RRHH trabaja directamente desde el sistema de **Remuneraciones**. Cada planilla debe distribuir sus pagos mediante un boton por planilla. Solo una planilla cerrada debe considerarse lista para una distribucion confiable.
 
@@ -30,7 +36,7 @@ La distribucion de planilla guarda la informacion de ese instante como un regist
 
 Mensaje ejecutivo: Planilla es el punto operativo que convierte la informacion laboral y remunerativa en base distribuible.
 
-### 3. Contabilidad
+### 4. Contabilidad
 
 Contabilidad toma como base la informacion distribuida por Planilla, almacenada en tablas de base de datos, para visualizar y confirmar el pago de cada planilla distribuido en cuentas contables.
 
@@ -38,7 +44,7 @@ Contabilidad visualiza la distribucion entregada por Planilla y valida su centro
 
 Mensaje ejecutivo: Contabilidad no debe cerrar con informacion antigua. Si Planilla cambia, Contabilidad necesita la nueva distribucion entregada por Planilla para cerrar correctamente.
 
-### 4. Presupuesto / Planificacion
+### 5. Presupuesto / Planificacion
 
 Presupuesto funciona como visor y analizador. No ejecuta mecanismos que cambien el calculo de distribucion; revisa la informacion generada desde Planilla y la observa con una clasificacion mas orientada a indicadores.
 
@@ -82,12 +88,27 @@ Enfoque:
 
 - Debe ser muy llamativa visualmente.
 - Debe mostrar de inmediato el nombre del cambio: **Nueva Distribucion Contable y Presupuestal**.
-- Debe sugerir el flujo institucional sin entrar todavia al detalle: PIT, Planilla, Contabilidad y Planificacion.
+- Debe sugerir el flujo institucional sin entrar todavia al detalle: Escalafon, PIT, Planilla, Contabilidad y Planificacion.
 - Debe sentirse como una presentacion CEO, no como una pantalla operativa.
 
 Frase sugerida: **Un solo flujo institucional para cerrar bien y pagar a tiempo.**
 
-### Diapositiva 1: PIT a tiempo
+### Diapositiva 1: Escalafon actualizado
+
+Tema: base de informacion del trabajador.
+
+Mensaje principal: Escalafon debe estar actualizado para que PIT y Planilla tomen informacion vigente en la distribucion.
+
+Enfoque:
+
+- Escalafon contiene informacion clave del trabajador.
+- Cargo y oficina o dependencia deben estar correctamente actualizados.
+- Si un docente tiene cargo o dependencia desactualizada, la distribucion pierde precision.
+- PIT y Planilla necesitan esa base laboral vigente para sostener el calculo.
+
+Frase sugerida: **Dato laboral correcto, distribucion mas precisa.**
+
+### Diapositiva 2: PIT a tiempo
 
 Tema: importancia del llenado del PIT por parte de los docentes.
 
@@ -101,7 +122,7 @@ Enfoque:
 
 Frase sugerida: **El calculo nace antes de la planilla: nace con el PIT correcto y a tiempo.**
 
-### Diapositiva 2: Planilla cerrada y redistribucion
+### Diapositiva 3: Planilla cerrada y redistribucion
 
 Tema: importancia de que Planilla cierre correctamente las planillas.
 
@@ -116,7 +137,7 @@ Enfoque:
 
 Frase sugerida: **Cerrar no es el final; cerrar bien permite distribuir bien.**
 
-### Diapositiva 3: Contabilidad y centro de costos
+### Diapositiva 4: Contabilidad y centro de costos
 
 Tema: continuidad del rol de Contabilidad al tomar la distribucion generada por Planilla.
 
@@ -132,7 +153,7 @@ Enfoque:
 
 Frase sugerida: **Contabilidad confirma el pago con la distribucion vigente que Planilla entrega.**
 
-### Diapositiva 4: Presupuesto como visor
+### Diapositiva 5: Presupuesto como visor
 
 Tema: rol de Presupuesto.
 
@@ -146,13 +167,14 @@ Enfoque:
 
 Frase sugerida: **Presupuesto mira la calidad del dato; no altera el registro del momento.**
 
-### Diapositiva 5: Flujo visual completo
+### Diapositiva 6: Flujo visual completo
 
 Tema: flujo de informacion desde PIT hasta los nodos finales.
 
 Debe mostrarse visualmente:
 
-- Nodo inicial: **PIT**.
+- Nodo inicial: **Escalafon**.
+- Nodo siguiente: **PIT**.
 - Criterio existente de calculo: **Empadronamiento existente de componentes vs cuentas contables por tipo de pago, estamento Y/O modalidad del trabajador**. No debe representarse como nodo ni paso del flujo.
 - Nodo intermedio: **Planilla / Remuneraciones**.
 - Accion interna de Planilla: generar, cerrar y distribuir por planilla.
@@ -165,7 +187,7 @@ Mensaje principal: la informacion avanza por una cadena de responsabilidad. Cada
 
 Frase sugerida: **Una sola cadena: si el registro queda desactualizado, todo el cierre queda desalineado.**
 
-### Diapositiva 6: Conclusiones ejecutivas
+### Diapositiva 7: Conclusiones ejecutivas
 
 Tema: cierre grafico sobre trabajo en equipo, oportunidad y pago.
 
@@ -173,6 +195,7 @@ Mensaje principal: la distribucion no es solo una funcion de software; es una co
 
 Enfoque:
 
+- Escalafon con datos laborales correctos.
 - PIT actualizado a tiempo.
 - Empadronamiento existente bien gobernado por tipo de pago, estamento Y/O modalidad del trabajador.
 - Planillas cerradas y redistribuidas cuando haya cambios.

@@ -203,6 +203,11 @@
       --slide-tint: rgba(0, 168, 157, 0.08);
     }
 
+    .slide-escalafon {
+      --slide-accent: var(--cyan);
+      --slide-tint: rgba(40, 185, 255, 0.08);
+    }
+
     .slide-planilla {
       --slide-accent: var(--amber);
       --slide-tint: rgba(245, 184, 65, 0.11);
@@ -621,6 +626,167 @@
       font-size: 1.08rem;
       font-weight: 850;
       line-height: 1.24;
+      text-align: center;
+    }
+
+    .escalafon-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      height: 100%;
+      align-items: center;
+    }
+
+    .escalafon-board {
+      position: relative;
+      display: grid;
+      align-content: space-between;
+      gap: 28px;
+      min-height: 410px;
+      padding: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(40, 185, 255, 0.22);
+      border-radius: 8px;
+      background: #e8f7fd;
+      color: #123142;
+      box-shadow: var(--shadow);
+    }
+
+    .escalafon-board::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: var(--cyan);
+    }
+
+    .registry-title {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+    }
+
+    .registry-title span {
+      color: rgba(18, 49, 66, 0.72);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .registry-title strong {
+      color: #123142;
+      font-size: clamp(2.9rem, 6vw, 5.4rem);
+      font-weight: 950;
+      line-height: 0.88;
+    }
+
+    .worker-fields {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+    }
+
+    .worker-field {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 62px;
+      padding: 12px 14px;
+      border: 1px solid rgba(18, 49, 66, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .worker-field b {
+      display: inline-grid;
+      min-height: 34px;
+      place-items: center;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--cyan);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 950;
+    }
+
+    .worker-field span {
+      color: #123142;
+      font-size: 1.05rem;
+      font-weight: 950;
+      text-align: right;
+    }
+
+    .escalafon-route {
+      display: grid;
+      gap: 18px;
+      align-content: center;
+    }
+
+    .route-strip {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 44px minmax(0, 1fr) 44px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+    }
+
+    .route-chip {
+      display: grid;
+      min-height: 92px;
+      place-items: center;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--cyan);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    .route-chip.source {
+      border-color: rgba(18, 49, 66, 0.2);
+      border-top-color: var(--cyan);
+      background: #123142;
+      color: var(--white);
+    }
+
+    .route-arrow {
+      position: relative;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--amber);
+    }
+
+    .route-arrow::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -1px;
+      width: 15px;
+      height: 15px;
+      background: var(--amber);
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      transform: translateY(-50%);
+    }
+
+    .precision-warning {
+      display: grid;
+      min-height: 92px;
+      place-items: center;
+      padding: 18px 20px;
+      border: 1px solid rgba(255, 111, 97, 0.3);
+      border-radius: 8px;
+      background: rgba(255, 111, 97, 0.12);
+      color: #76251f;
+      font-size: 1.08rem;
+      font-weight: 900;
+      line-height: 1.25;
       text-align: center;
     }
 
@@ -1072,7 +1238,7 @@
       z-index: 2;
       display: grid;
       gap: 8px;
-      width: 220px;
+      width: 190px;
       min-height: 138px;
       padding: 18px;
       border: 1px solid rgba(17, 21, 29, 0.12);
@@ -1118,27 +1284,33 @@
       line-height: 1.28;
     }
 
-    .node-pit {
+    .node-escalafon {
       --node-rgb: 40, 185, 255;
-      left: 7%;
+      left: 3%;
+      top: 38%;
+    }
+
+    .node-pit {
+      --node-rgb: 0, 168, 157;
+      left: 25%;
       top: 38%;
     }
 
     .node-planilla {
       --node-rgb: 245, 184, 65;
-      left: 39%;
+      left: 47%;
       top: 38%;
     }
 
     .node-conta {
-      --node-rgb: 0, 168, 157;
-      right: 7%;
+      --node-rgb: 79, 186, 111;
+      right: 5%;
       top: 14%;
     }
 
     .node-presupuesto {
       --node-rgb: 117, 87, 230;
-      right: 7%;
+      right: 5%;
       bottom: 12%;
     }
 
@@ -1367,6 +1539,7 @@
         padding: 18px;
       }
 
+      .slide-escalafon .slide-shell,
       .slide-planilla .slide-shell,
       .slide-contabilidad .slide-shell,
       .slide-presupuesto .slide-shell,
@@ -1376,6 +1549,7 @@
         gap: 20px;
       }
 
+      .slide-escalafon .slide-top,
       .slide-planilla .slide-top,
       .slide-contabilidad .slide-top,
       .slide-presupuesto .slide-top,
@@ -1411,6 +1585,8 @@
         line-height: 1.28;
       }
 
+      .slide-escalafon .stage,
+      .slide-escalafon .escalafon-layout,
       .slide-planilla .stage,
       .slide-planilla .planilla-layout,
       .slide-contabilidad .stage,
@@ -1422,6 +1598,7 @@
         height: auto;
       }
 
+      .slide-escalafon .escalafon-board,
       .slide-planilla .snapshot-panel,
       .slide-planilla .record-board,
       .slide-presupuesto .visor-panel,
@@ -1453,7 +1630,7 @@
       }
 
       .slide-flow .flow-node {
-        width: 196px;
+        width: 176px;
         min-height: 98px;
         gap: 6px;
         padding: 12px;
@@ -2030,6 +2207,43 @@
       color: rgba(255, 255, 255, 0.94);
     }
 
+    html[data-theme="dark"] .escalafon-board {
+      border-color: rgba(40, 185, 255, 0.36);
+      background: #123142;
+      color: var(--white);
+    }
+
+    html[data-theme="dark"] .registry-title span {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    html[data-theme="dark"] .registry-title strong,
+    html[data-theme="dark"] .worker-field span {
+      color: var(--white);
+    }
+
+    html[data-theme="dark"] .worker-field {
+      border-color: rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    html[data-theme="dark"] .route-chip {
+      border-color: rgba(255, 255, 255, 0.14);
+      border-top-color: var(--cyan);
+      background: var(--surface);
+      color: var(--white);
+    }
+
+    html[data-theme="dark"] .route-chip.source {
+      background: #0d2533;
+    }
+
+    html[data-theme="dark"] .precision-warning {
+      border-color: rgba(255, 111, 97, 0.42);
+      background: rgba(255, 111, 97, 0.16);
+      color: rgba(255, 255, 255, 0.92);
+    }
+
     html[data-theme="dark"] .record-board {
       background: var(--surface);
       color: var(--white);
@@ -2136,6 +2350,43 @@
     @keyframes linkPulse {
       0%, 100% { transform: scaleX(0.76); opacity: 0.62; }
       50% { transform: scaleX(1); opacity: 1; }
+    }
+
+    @media (max-width: 980px), (max-height: 680px) {
+      .escalafon-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 14px;
+      }
+
+      .escalafon-board {
+        min-height: 0;
+        padding: 22px;
+      }
+
+      .route-strip {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .route-chip {
+        min-height: 58px;
+        padding: 12px;
+      }
+
+      .route-arrow {
+        width: 6px;
+        height: 22px;
+        justify-self: center;
+      }
+
+      .route-arrow::after {
+        top: auto;
+        right: auto;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+      }
     }
 
     @media (max-width: 1180px) {
@@ -2287,6 +2538,7 @@
       }
 
       .flow-node,
+      .node-escalafon,
       .node-pit,
       .node-planilla,
       .node-conta,
@@ -2560,6 +2812,7 @@
       }
 
       .flow-node,
+      .node-escalafon,
       .node-pit,
       .node-planilla,
       .node-conta,
@@ -3356,6 +3609,57 @@
       }
     }
 
+    @media (max-width: 520px) {
+      .escalafon-board {
+        gap: 14px;
+        padding: 16px;
+      }
+
+      .registry-title {
+        gap: 8px;
+      }
+
+      .registry-title span {
+        font-size: 0.66rem;
+      }
+
+      .registry-title strong {
+        font-size: 2.14rem;
+        line-height: 0.95;
+      }
+
+      .worker-fields {
+        gap: 8px;
+      }
+
+      .worker-field {
+        min-height: 42px;
+        padding: 8px 10px;
+      }
+
+      .worker-field b {
+        min-height: 28px;
+        padding: 5px 9px;
+        font-size: 0.66rem;
+      }
+
+      .worker-field span,
+      .route-chip {
+        font-size: 0.78rem;
+      }
+
+      .route-chip {
+        min-height: 44px;
+      }
+
+      .precision-warning {
+        min-height: 62px;
+        padding: 11px;
+        font-size: 0.76rem;
+        line-height: 1.22;
+      }
+    }
+
     @media (max-width: 430px) {
       .reveal .slides > section {
         padding: 16px clamp(20px, 6vw, 24px) calc(76px + env(safe-area-inset-bottom));
@@ -3785,6 +4089,64 @@
 
       .deck-ui {
         inset: auto 18px calc(10px + env(safe-area-inset-bottom)) 18px;
+      }
+    }
+
+    @media (max-width: 380px) and (max-height: 780px) and (orientation: portrait) {
+      .slide-escalafon .slide-shell {
+        gap: 8px;
+      }
+
+      .slide-escalafon .headline h1 {
+        font-size: 1.12rem;
+      }
+
+      .slide-escalafon .lead {
+        font-size: 0.68rem;
+      }
+
+      .escalafon-layout,
+      .escalafon-route {
+        gap: 7px;
+      }
+
+      .escalafon-board {
+        gap: 10px;
+        padding: 12px;
+      }
+
+      .registry-title strong {
+        font-size: 1.72rem;
+      }
+
+      .worker-field {
+        min-height: 36px;
+        padding: 6px 8px;
+      }
+
+      .worker-field b {
+        min-height: 24px;
+        font-size: 0.58rem;
+      }
+
+      .worker-field span,
+      .route-chip {
+        font-size: 0.66rem;
+      }
+
+      .route-chip {
+        min-height: 34px;
+        padding: 7px 8px;
+      }
+
+      .route-arrow {
+        height: 16px;
+      }
+
+      .precision-warning {
+        min-height: 48px;
+        padding: 8px;
+        font-size: 0.62rem;
       }
     }
 

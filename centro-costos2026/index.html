@@ -37,6 +37,8 @@
               </p>
 
               <div class="cover-flow" data-animate aria-label="Flujo ejecutivo">
+                <div class="cover-node">Escalafón</div>
+                <div class="cover-link"></div>
                 <div class="cover-node">PIT</div>
                 <div class="cover-link"></div>
                 <div class="cover-node">Planilla</div>
@@ -45,6 +47,65 @@
                 <div class="cover-link"></div>
                 <div class="cover-node">Planificación</div>
               </div>
+            </main>
+          </div>
+        </section>
+
+        <section
+          class="slide slide-escalafon"
+          data-title="Escalafón actualizado"
+          data-transition="convex"
+        >
+          <div class="slide-shell container-xxl">
+            <header class="slide-top">
+              <div class="headline">
+                <div class="kicker" data-animate>Escalafón / Base laboral</div>
+                <h1 data-animate>
+                  Dato laboral vigente,
+                  <span class="accent">distribución precisa</span>.
+                </h1>
+                <p class="lead" data-animate>
+                  Escalafón actualiza la información del trabajador para que PIT
+                  y Planilla calculen con datos correctos.
+                </p>
+              </div>
+            </header>
+
+            <main class="stage escalafon-layout">
+              <section class="escalafon-board" data-animate>
+                <div class="registry-title">
+                  <span>Base de trabajadores</span>
+                  <strong>ESCALAFÓN</strong>
+                </div>
+
+                <div class="worker-fields" aria-label="Datos críticos">
+                  <div class="worker-field">
+                    <b>Cargo</b>
+                    <span>actualizado</span>
+                  </div>
+                  <div class="worker-field">
+                    <b>Dependencia</b>
+                    <span>correcta</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="escalafon-route" data-animate>
+                <div
+                  class="route-strip"
+                  aria-label="Escalafón alimenta PIT y Planilla"
+                >
+                  <div class="route-chip source">Escalafón</div>
+                  <div class="route-arrow" aria-hidden="true"></div>
+                  <div class="route-chip">PIT</div>
+                  <div class="route-arrow" aria-hidden="true"></div>
+                  <div class="route-chip">Planilla</div>
+                </div>
+                <div class="precision-warning">
+                  Si cargo u oficina no están al día, la distribución pierde
+                  precisión.
+                </div>
+              </section>
             </main>
           </div>
         </section>
@@ -245,16 +306,14 @@
           <div class="slide-shell container-xxl">
             <header class="slide-top">
               <div class="headline">
-                <div class="kicker" data-animate>
-                  Presupuesto / Planificación
-                </div>
+                <div class="kicker" data-animate>Planificación</div>
                 <h1 data-animate>
-                  Presupuesto lee el dato;
+                  Lee el dato;
                   <span class="accent">no cambia el cálculo</span>.
                 </h1>
                 <p class="lead" data-animate>
-                  Su valor es control ejecutivo: revisa indicadores sin alterar
-                  la distribución generada.
+                  Su valor es control ejecutivo: revisa clasificadores sin
+                  alterar la distribución generada.
                 </p>
               </div>
             </header>
@@ -265,7 +324,7 @@
                 <div class="visor-lens">
                   <div class="lens-ring"></div>
                   <div class="visor-word">
-                    VER<span>control + indicadores</span>
+                    VER<span>control + clasificador</span>
                   </div>
                 </div>
               </aside>
@@ -283,10 +342,10 @@
                   class="indicator"
                   style="--value: 68%; --bar: var(--amber)"
                 >
-                  <strong>Clasifica</strong>
+                  <strong>Cataloga</strong>
                   <span
                     >Ordena la información con lectura orientada a
-                    indicadores.</span
+                    clasificadores.</span
                   >
                   <em>02</em>
                 </article>
@@ -309,8 +368,8 @@
                   <span class="accent">cierre alineado</span>.
                 </h1>
                 <p class="lead" data-animate>
-                  PIT prepara el dato, Planilla distribuye, Contabilidad
-                  confirma y Presupuesto da seguimiento.
+                  Escalafón y PIT preparan el dato; Planilla distribuye y las
+                  áreas validan el cierre.
                 </p>
               </div>
             </header>
@@ -325,11 +384,19 @@
                 >
                   <path
                     class="flow-path"
-                    d="M175 220 C300 220, 350 220, 470 220"
+                    d="M132 220 C188 220, 225 220, 272 220"
                   ></path>
                   <path
                     class="flow-path hot"
-                    d="M175 220 C300 220, 350 220, 470 220"
+                    d="M132 220 C188 220, 225 220, 272 220"
+                  ></path>
+                  <path
+                    class="flow-path"
+                    d="M362 220 C405 220, 438 220, 485 220"
+                  ></path>
+                  <path
+                    class="flow-path hot"
+                    d="M362 220 C405 220, 438 220, 485 220"
                   ></path>
                   <path
                     class="flow-path"
@@ -349,10 +416,16 @@
                   ></path>
                 </svg>
 
-                <article class="flow-node node-pit" tabindex="0">
+                <article class="flow-node node-escalafon" tabindex="0">
                   <span class="tag">Nodo inicial</span>
+                  <strong>Escalafón</strong>
+                  <span>Información de trabajadores actualizada.</span>
+                </article>
+
+                <article class="flow-node node-pit" tabindex="0">
+                  <span class="tag">Nodo base</span>
                   <strong>PIT</strong>
-                  <span>Dato docente completo antes del cálculo.</span>
+                  <span>Plan mensual completo antes del cálculo.</span>
                 </article>
 
                 <article class="flow-node node-planilla" tabindex="0">
@@ -364,18 +437,14 @@
                 <article class="flow-node node-conta" tabindex="0">
                   <span class="tag">Nodo final</span>
                   <strong>Contabilidad</strong>
-                  <span
-                    >Visualiza cuentas y valida el nuevo centro de costos para
-                    el pago.</span
-                  >
+                  <span>Visualiza cuentas y nuevo centro de costos.</span>
                 </article>
 
                 <article class="flow-node node-presupuesto" tabindex="0">
                   <span class="tag">Nodo final</span>
-                  <strong>Planificación / Presupuesto</strong>
+                  <strong>Planificación</strong>
                   <span
-                    >Lee indicadores y sostiene el seguimiento
-                    institucional.</span
+                    >Lee clasificadores y da seguimiento institucional.</span
                   >
                 </article>
               </div>
@@ -384,7 +453,7 @@
                 <div class="caption-item" data-animate>
                   <strong>Dato al día</strong>
                   <span
-                    >PIT y planilla se toman en el instante de
+                    >Escalafón, PIT y planilla se toman en el instante de
                     distribución.</span
                   >
                 </div>
@@ -473,10 +542,10 @@
         <div
           class="deck-counter"
           aria-live="polite"
-          aria-label="Carátula, diapositiva 1 de 7"
+          aria-label="Carátula, diapositiva 1 de 8"
         >
           <strong data-slide-current>1</strong>
-          <span data-slide-total>de 7</span>
+          <span data-slide-total>de 8</span>
         </div>
         <div class="dots" role="tablist" aria-label="Diapositivas">
           <button
@@ -520,6 +589,12 @@
             type="button"
             data-jump="6"
             aria-label="Ir a diapositiva 6"
+          ></button>
+          <button
+            class="dot"
+            type="button"
+            data-jump="7"
+            aria-label="Ir a diapositiva 7"
           ></button>
         </div>
       </div>
