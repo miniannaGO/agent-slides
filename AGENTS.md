@@ -33,6 +33,12 @@ Reglas obligatorias:
 - Cada proyecto nuevo o modificado para diapositivas debe construirse y mantenerse con soporte funcional de light mode y dark mode, incluyendo un control visible para alternar el tema y persistencia de la preferencia cuando aplique.
 - Si la especificacion define una cantidad de diapositivas, conservar exactamente esa cantidad de diapositivas principales.
 
+## Criterios narrativos para presentaciones CEO
+
+- Cada frase debe tener logica ejecutiva clara: sujeto, accion y consecuencia. Evitar slogans simbolicos que suenan bien pero no explican por que importa.
+- Simplificar el contenido sin romper la continuidad: usar pocos conectores utiles (`para`, `cuando`, `si`, `porque`, `por eso`) cuando aclaren causa-efecto con pocas palabras.
+- Priorizar solo las palabras necesarias para decision ejecutiva. Quitar adornos, redundancias o enfasis agresivo, pero no eliminar relaciones clave del `especificaciones.md`.
+
 ## Criterios visuales para diapositivas
 
 - Construir presentaciones manipulables, visuales y faciles de aceptar.
