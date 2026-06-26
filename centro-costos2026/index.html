@@ -159,8 +159,8 @@
                   <span class="accent">distribución válida</span>.
                 </h1>
                 <p class="lead" data-animate>
-                  Cada distribución fija una foto del momento; si la planilla
-                  cambia, se vuelve a distribuir.
+                  Planilla ejecuta cada distribución y fija la foto del momento;
+                  si cambia, Planilla redistribuye.
                 </p>
               </div>
             </header>
@@ -182,18 +182,18 @@
                     <div>
                       <h3>Base lista para distribuir</h3>
                       <p>
-                        El cierre convierte la planilla en base operativa para
-                        Contabilidad.
+                        El cierre deja la base lista para que Planilla
+                        distribuya hacia Contabilidad.
                       </p>
                     </div>
                   </article>
                   <article class="status-row redistribute">
                     <div class="status-pill">Redistribuir</div>
                     <div>
-                      <h3>Cambio posterior, nuevo registro</h3>
+                      <h3>Planilla emite el nuevo registro</h3>
                       <p>
-                        Si la planilla cambia, Contabilidad necesita una
-                        distribución actualizada.
+                        Si la planilla cambia, Planilla vuelve a distribuir;
+                        Contabilidad valida el dato actualizado.
                       </p>
                     </div>
                   </article>
@@ -207,13 +207,13 @@
                   <div class="record-card">
                     <div>
                       <strong>REGISTRO</strong>
-                      <span>planilla + remuneraciones + reglas vigentes</span>
                     </div>
                   </div>
                 </div>
                 <p>
-                  Contabilidad trabaja con el último registro válido. Si
-                  Planilla cambia, el cierre requiere una nueva distribución.
+                  Contabilidad trabaja con el último registro válido; no
+                  redistribuye. Si Planilla cambia, Planilla entrega una nueva
+                  distribución.
                 </p>
               </aside>
             </main>
@@ -348,32 +348,27 @@
                 <article class="flow-node node-pit" tabindex="0">
                   <span class="tag">Nodo inicial</span>
                   <strong>PIT</strong>
-                  <span
-                    >Dato docente completo antes del cálculo.</span
-                  >
+                  <span>Dato docente completo antes del cálculo.</span>
                 </article>
 
                 <article class="flow-node node-planilla" tabindex="0">
                   <span class="tag">Nodo intermedio</span>
                   <strong>Planilla</strong>
-                  <span
-                    >Genera, cierra y distribuye desde Remuneraciones.</span
-                  >
+                  <span>Genera, cierra y distribuye desde Remuneraciones.</span>
                 </article>
 
                 <article class="flow-node node-conta" tabindex="0">
                   <span class="tag">Nodo final</span>
                   <strong>Contabilidad</strong>
-                  <span
-                    >Valida centro de costos y cuentas calculadas.</span
-                  >
+                  <span>Valida centro de costos y cuentas calculadas.</span>
                 </article>
 
                 <article class="flow-node node-presupuesto" tabindex="0">
                   <span class="tag">Nodo final</span>
                   <strong>Planificación / Presupuesto</strong>
                   <span
-                    >Lee indicadores y sostiene el seguimiento institucional.</span
+                    >Lee indicadores y sostiene el seguimiento
+                    institucional.</span
                   >
                 </article>
               </div>
@@ -382,20 +377,17 @@
                 <div class="caption-item" data-animate>
                   <strong>Dato al día</strong>
                   <span
-                    >PIT y planilla se toman en el instante de distribución.</span
+                    >PIT y planilla se toman en el instante de
+                    distribución.</span
                   >
                 </div>
                 <div class="caption-item" data-animate>
                   <strong>Regla gobernada</strong>
-                  <span
-                    >El cálculo consulta la matriz ya empadronada.</span
-                  >
+                  <span>El cálculo consulta la matriz ya empadronada.</span>
                 </div>
                 <div class="caption-item" data-animate>
                   <strong>Cierre vigente</strong>
-                  <span
-                    >Las áreas consumen la última distribución válida.</span
-                  >
+                  <span>Las áreas consumen la última distribución válida.</span>
                 </div>
               </div>
             </main>
@@ -438,8 +430,8 @@
                   <div>
                     <strong>Empadronamiento gobernado</strong>
                     <span
-                      >Tipo de pago, estamento y modalidad vinculan componente
-                      y cuenta.</span
+                      >Tipo de pago, estamento y modalidad vinculan componente y
+                      cuenta.</span
                     >
                   </div>
                 </article>
@@ -448,7 +440,8 @@
                   <div>
                     <strong>Planilla cerrada y redistribuida</strong>
                     <span
-                      >Cada cambio posterior exige un registro actualizado.</span
+                      >Cada cambio posterior exige un registro
+                      actualizado.</span
                     >
                   </div>
                 </article>
@@ -458,22 +451,15 @@
                 <h3>Del dato al pago oportuno</h3>
                 <div class="payline">
                   <div class="pay-step" style="--step-color: var(--cyan)">
-                    <b>A</b
-                    ><span
-                      >Datos completos en el momento correcto.</span
-                    >
+                    <b>A</b><span>Datos completos en el momento correcto.</span>
                   </div>
                   <div class="pay-step" style="--step-color: var(--amber)">
                     <b>B</b
-                    ><span
-                      >Planilla entrega una distribución vigente.</span
-                    >
+                    ><span>Planilla entrega una distribución vigente.</span>
                   </div>
                   <div class="pay-step" style="--step-color: var(--teal)">
                     <b>C</b
-                    ><span
-                      >Contabilidad valida para cerrar con confianza.</span
-                    >
+                    ><span>Contabilidad valida para cerrar con confianza.</span>
                   </div>
                 </div>
                 <div class="final-call">
