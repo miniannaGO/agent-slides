@@ -89,6 +89,7 @@ Enfoque:
 - Debe ser muy llamativa visualmente.
 - Debe mostrar de inmediato el nombre del cambio: **Nueva Distribucion Contable y Presupuestal**.
 - Debe sugerir el flujo institucional sin entrar todavia al detalle: Escalafon, PIT, Planilla, Contabilidad y Planificacion.
+- Debe incluir una senal visual clara de que los nodos del flujo se leen de abajo hacia arriba.
 - Debe sentirse como una presentacion CEO, no como una pantalla operativa.
 
 Frase sugerida: **Un solo flujo institucional para cerrar bien y pagar a tiempo.**
