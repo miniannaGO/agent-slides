@@ -18,13 +18,13 @@ La explicacion debe insistir en la idea de avance por tramos, como un flujo cont
 
 ### 1. Escalafon y datos del trabajador
 
-El **Escalafon** es una base de informacion donde se administra informacion clave de los trabajadores, como cargo y oficina o dependencia de trabajo.
+El **Escalafon** es una base de informacion donde se administra la informacion laboral actualizada del trabajador: cargo, dependencia, estamento, modalidad, dedicacion, categoria, horas de trabajo y otros datos que sostienen la planificacion y la distribucion.
 
-Mensaje ejecutivo: si el cargo, oficina o dependencia del trabajador no estan correctamente actualizados, el PIT y Planilla pueden tomar informacion desactualizada y la distribucion pierde precision.
+Mensaje ejecutivo: si la informacion laboral del trabajador no esta actualizada a tiempo, el PIT y Planilla pueden tomar datos desactualizados; la planificacion y la distribucion pierden precision.
 
 ### 2. PIT y trabajo individual docente
 
-El **PIT (Trabajo Individual)** es la base inicial para el caso particular de docentes a tiempo completo. Su informacion se integra al calculo de distribucion junto con el empadronamiento existente de componentes de planilla versus cuentas contables.
+El **PIT (Plan de Trabajo Individual)** es la base inicial para el caso particular de docentes a tiempo completo. Su informacion se integra al calculo de distribucion junto con el empadronamiento existente de componentes de planilla versus cuentas contables.
 
 Mensaje ejecutivo: si el PIT no esta administrado, completo y actualizado a tiempo, la distribucion de docentes y dependencias pierde precision.
 
@@ -97,16 +97,16 @@ Frase sugerida: **Un solo flujo institucional para cerrar bien y pagar a tiempo.
 
 Tema: base de informacion del trabajador.
 
-Mensaje principal: Escalafon debe estar actualizado para que PIT y Planilla tomen informacion vigente en la distribucion.
+Mensaje principal: Escalafon debe mantener actualizada la informacion laboral del trabajador para que PIT planifique y Planilla distribuya con informacion vigente.
 
 Enfoque:
 
-- Escalafon contiene informacion clave del trabajador.
-- Cargo y oficina o dependencia deben estar correctamente actualizados.
-- Si un docente tiene cargo o dependencia desactualizada, la distribucion pierde precision.
-- PIT y Planilla necesitan esa base laboral vigente para sostener el calculo.
+- Escalafon concentra informacion laboral del trabajador.
+- La informacion debe estar actualizada a tiempo para planificar bien el PIT y distribuir correctamente en Planilla.
+- Ejemplos de datos relevantes: cargo, dependencia, modalidad, dedicacion, estamento, categoria y horas de trabajo.
+- Si un docente tiene informacion laboral desactualizada, la planificacion y la distribucion pierden precision.
 
-Frase sugerida: **Dato laboral correcto, distribucion mas precisa.**
+Frase sugerida: **Informacion laboral vigente para planificar y distribuir bien.**
 
 ### Diapositiva 2: PIT a tiempo
 
@@ -195,7 +195,7 @@ Mensaje principal: la distribucion no es solo una funcion de software; es una co
 
 Enfoque:
 
-- Escalafon con datos laborales correctos.
+- Escalafon con informacion laboral vigente.
 - PIT actualizado a tiempo.
 - Empadronamiento existente bien gobernado por tipo de pago, estamento Y/O modalidad del trabajador.
 - Planillas cerradas y redistribuidas cuando haya cambios.
