@@ -86,7 +86,7 @@
       background: var(--slide-accent, var(--teal));
     }
 
-    .reveal .slides > section:not(.slide-cover)::after {
+    /* .reveal .slides > section:not(.slide-cover)::after {
       content: "";
       position: absolute;
       z-index: 0;
@@ -96,7 +96,7 @@
       height: calc(100% - 8px);
       background: var(--slide-tint, transparent);
       pointer-events: none;
-    }
+    } */
 
     .reveal .slides > section.present,
     html.fallback .reveal .slides > section.fallback-visible {
