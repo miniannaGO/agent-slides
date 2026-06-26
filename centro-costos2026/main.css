@@ -2623,6 +2623,650 @@
       }
     }
 
+    @media (max-width: 760px) {
+      .headline h1,
+      .lead,
+      .cover-content h1,
+      .cover-content p,
+      .cover-panel,
+      .signal-card,
+      .status-row,
+      .indicator,
+      .flow-node,
+      .caption-item,
+      .commitment,
+      .pay-step,
+      .final-call {
+        overflow-wrap: anywhere;
+      }
+
+      .reveal .slides > section {
+        padding-bottom: calc(86px + env(safe-area-inset-bottom));
+        scroll-padding-bottom: calc(92px + env(safe-area-inset-bottom));
+      }
+
+      .slide-shell,
+      .cover-shell {
+        width: 100%;
+        min-height: auto;
+        max-height: none;
+        align-content: start;
+      }
+
+      .slide-shell {
+        grid-template-rows: auto auto;
+      }
+
+      .cover-shell {
+        overflow: visible;
+      }
+
+      .slide-cover::before {
+        width: 12px;
+        box-shadow:
+          12px 0 0 var(--amber),
+          24px 0 0 var(--cyan);
+      }
+
+      .stage,
+      .split,
+      .planilla-layout,
+      .visor-layout,
+      .closing-layout,
+      .flow-layout {
+        width: 100%;
+      }
+
+      .metric-stack,
+      .status-flow,
+      .dashboard,
+      .commitments,
+      .payline {
+        gap: 10px;
+      }
+
+      .panel,
+      .signal-card,
+      .flow-node,
+      .caption-item,
+      .commitment,
+      .pay-step {
+        max-width: 100%;
+      }
+
+      .dashboard,
+      .status-flow,
+      .payline,
+      .commitments {
+        align-content: start;
+      }
+
+      .flow-layout {
+        grid-template-rows: auto auto;
+      }
+
+      .deck-ui {
+        bottom: calc(12px + env(safe-area-inset-bottom));
+      }
+
+      .deck-progress {
+        flex: 1 1 auto;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .reveal {
+        font-size: 15.5px;
+      }
+
+      .reveal .slides > section {
+        padding: 18px 12px calc(80px + env(safe-area-inset-bottom));
+      }
+
+      .slide-shell,
+      .cover-shell {
+        gap: 12px;
+      }
+
+      .cover-content {
+        gap: 14px;
+      }
+
+      .cover-content h1 {
+        font-size: 2.42rem;
+        line-height: 0.96;
+      }
+
+      .cover-content p {
+        font-size: 0.92rem;
+        line-height: 1.26;
+      }
+
+      .cover-flow {
+        max-width: 100%;
+        gap: 6px;
+      }
+
+      .cover-node {
+        min-height: 34px;
+        padding: 6px 9px;
+        font-size: 0.68rem;
+      }
+
+      .cover-node::before {
+        min-width: 30px;
+        min-height: 22px;
+        font-size: 0.62rem;
+      }
+
+      .cover-panel {
+        max-width: 100%;
+        padding: 14px;
+      }
+
+      .cover-panel strong {
+        font-size: 1rem;
+      }
+
+      .cover-panel span {
+        font-size: 0.78rem;
+      }
+
+      .kicker,
+      .cover-kicker {
+        max-inline-size: 100%;
+        padding: 6px 9px;
+        font-size: 0.66rem;
+      }
+
+      .headline h1 {
+        font-size: 1.55rem;
+      }
+
+      .lead {
+        font-size: 0.84rem;
+      }
+
+      .signal-card,
+      .commitment {
+        grid-template-columns: 44px 1fr;
+        gap: 10px;
+        padding: 11px;
+      }
+
+      .signal-icon,
+      .commitment .mark {
+        width: 40px;
+        height: 40px;
+      }
+
+      .signal-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .signal-card h3,
+      .status-row h3,
+      .commitment strong,
+      .caption-item strong {
+        font-size: 0.86rem;
+      }
+
+      .signal-card p,
+      .status-row p,
+      .commitment span,
+      .caption-item span,
+      .flow-node span,
+      .indicator span,
+      .pay-step span {
+        font-size: 0.73rem;
+      }
+
+      .precision-panel,
+      .snapshot-panel,
+      .record-board,
+      .visor-panel,
+      .dashboard,
+      .payment-panel {
+        padding: 12px;
+      }
+
+      .precision-panel {
+        min-height: 0;
+      }
+
+      .gauge {
+        min-height: 136px;
+      }
+
+      .gauge-ring {
+        width: 120px;
+        height: 120px;
+        border-width: 10px;
+      }
+
+      .gauge-ring::before {
+        inset: -10px;
+        border-width: 10px;
+      }
+
+      .gauge-core {
+        width: 84px;
+        height: 84px;
+      }
+
+      .gauge-core strong {
+        font-size: 1.42rem;
+      }
+
+      .gauge-core span {
+        margin-top: 5px;
+        font-size: 0.6rem;
+      }
+
+      .quote-band,
+      .final-call {
+        padding: 12px;
+        font-size: 0.82rem;
+        line-height: 1.24;
+      }
+
+      .record-board,
+      .visor-panel,
+      .payment-panel {
+        gap: 10px;
+      }
+
+      .control-frame,
+      .visor-lens {
+        min-height: 150px;
+      }
+
+      .record-card {
+        inset: 18px;
+      }
+
+      .record-card strong,
+      .visor-word {
+        font-size: 1.75rem;
+      }
+
+      .record-card span,
+      .visor-word span,
+      .record-board p {
+        font-size: 0.72rem;
+      }
+
+      .lens-ring {
+        width: 138px;
+        height: 138px;
+        border-width: 14px;
+      }
+
+      .lens-ring::after {
+        right: -32px;
+        bottom: -22px;
+        width: 64px;
+        height: 14px;
+      }
+
+      .status-row {
+        gap: 8px;
+        padding: 10px 0;
+      }
+
+      .status-pill {
+        min-height: 30px;
+        padding: 6px 10px;
+        font-size: 0.68rem;
+      }
+
+      .indicator {
+        gap: 8px;
+        padding: 10px 0;
+      }
+
+      .indicator strong,
+      .indicator em {
+        font-size: 0.88rem;
+      }
+
+      .flow-map {
+        gap: 8px;
+        padding: 12px;
+      }
+
+      .flow-node {
+        gap: 6px;
+        padding: 12px;
+      }
+
+      .flow-node:hover,
+      .flow-node.is-focused {
+        transform: none;
+      }
+
+      .flow-node .tag {
+        min-height: 24px;
+        padding: 4px 8px;
+        font-size: 0.62rem;
+      }
+
+      .flow-node strong {
+        font-size: 0.95rem;
+      }
+
+      .caption-item {
+        padding: 11px;
+      }
+
+      .payment-panel h3 {
+        font-size: 1rem;
+      }
+
+      .pay-step {
+        grid-template-columns: 32px 1fr;
+        gap: 9px;
+        padding: 10px;
+      }
+
+      .pay-step b {
+        width: 30px;
+        height: 30px;
+        font-size: 0.72rem;
+      }
+
+      .deck-ui {
+        inset: auto 10px calc(9px + env(safe-area-inset-bottom)) 10px;
+        gap: 6px;
+      }
+
+      .deck-progress {
+        gap: 6px;
+      }
+
+      .deck-counter {
+        flex: 0 0 auto;
+        min-height: 34px;
+        padding: 7px 8px;
+      }
+
+      .deck-counter strong {
+        font-size: 0.86rem;
+      }
+
+      .dots {
+        flex: 0 1 auto;
+        gap: 5px;
+        padding: 7px 8px;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+      }
+
+      .dot.is-active {
+        width: 22px;
+      }
+
+      .nav-cluster {
+        flex: 0 0 auto;
+        gap: 5px;
+      }
+
+      .nav-btn {
+        width: 34px;
+        height: 34px;
+      }
+
+      .nav-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .reveal .slides > section {
+        padding: 16px 10px calc(76px + env(safe-area-inset-bottom));
+      }
+
+      .cover-content h1 {
+        font-size: 2.08rem;
+      }
+
+      .cover-content p {
+        font-size: 0.84rem;
+      }
+
+      .cover-kicker,
+      .kicker {
+        font-size: 0.62rem;
+      }
+
+      .headline h1 {
+        font-size: 1.36rem;
+      }
+
+      .lead {
+        font-size: 0.8rem;
+      }
+
+      .signal-card,
+      .commitment {
+        grid-template-columns: 38px 1fr;
+        gap: 9px;
+        padding: 10px;
+      }
+
+      .signal-icon,
+      .commitment .mark {
+        width: 36px;
+        height: 36px;
+      }
+
+      .signal-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .control-frame,
+      .visor-lens {
+        min-height: 132px;
+      }
+
+      .record-card strong,
+      .visor-word {
+        font-size: 1.5rem;
+      }
+
+      .lens-ring {
+        width: 116px;
+        height: 116px;
+        border-width: 12px;
+      }
+
+      .lens-ring::after {
+        right: -26px;
+        bottom: -18px;
+        width: 52px;
+        height: 12px;
+      }
+
+      .deck-ui {
+        inset: auto 8px calc(8px + env(safe-area-inset-bottom)) 8px;
+      }
+
+      .deck-counter {
+        min-height: 32px;
+        padding: 6px 7px;
+      }
+
+      .deck-counter strong {
+        font-size: 0.82rem;
+      }
+
+      .dots {
+        gap: 4px;
+        padding: 6px 7px;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+      }
+
+      .dot.is-active {
+        width: 20px;
+      }
+
+      .nav-cluster {
+        gap: 4px;
+      }
+
+      .nav-btn {
+        width: 32px;
+        height: 32px;
+      }
+
+      .nav-btn svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    @media (orientation: landscape) and (max-height: 560px) {
+      .reveal .slides > section {
+        padding-bottom: calc(58px + env(safe-area-inset-bottom));
+      }
+
+      .slide-shell,
+      .cover-shell {
+        min-height: auto;
+        max-height: none;
+        align-content: start;
+      }
+
+      .slide-top {
+        min-height: 0;
+      }
+
+      .cover-shell {
+        gap: 16px;
+        overflow: visible;
+      }
+
+      .cover-content {
+        gap: 10px;
+      }
+
+      .cover-content h1 {
+        font-size: 2.4rem;
+        line-height: 0.94;
+      }
+
+      .cover-content p {
+        font-size: 0.84rem;
+      }
+
+      .cover-flow {
+        gap: 6px;
+        padding-top: 0;
+      }
+
+      .cover-node {
+        min-height: 30px;
+        padding: 5px 9px;
+        font-size: 0.66rem;
+      }
+
+      .cover-panel {
+        gap: 8px;
+        padding: 12px;
+      }
+
+      .metric-stack,
+      .status-flow,
+      .dashboard,
+      .commitments,
+      .payline {
+        gap: 8px;
+      }
+
+      .precision-panel,
+      .snapshot-panel,
+      .record-board,
+      .visor-panel,
+      .dashboard,
+      .payment-panel {
+        padding: 12px;
+      }
+
+      .gauge {
+        min-height: 132px;
+      }
+
+      .control-frame,
+      .visor-lens {
+        min-height: 140px;
+      }
+
+      .flow-map {
+        padding: 12px;
+      }
+
+      .deck-ui {
+        inset: auto 12px calc(8px + env(safe-area-inset-bottom)) 12px;
+      }
+
+      .deck-counter {
+        min-height: 32px;
+        padding: 6px 8px;
+      }
+
+      .dots {
+        gap: 5px;
+        padding: 7px 8px;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+      }
+
+      .dot.is-active {
+        width: 22px;
+      }
+
+      .nav-cluster {
+        gap: 5px;
+      }
+
+      .nav-btn {
+        width: 32px;
+        height: 32px;
+      }
+
+      .nav-btn svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    @media (orientation: landscape) and (max-height: 560px) and (max-width: 520px) {
+      .cover-content h1 {
+        font-size: 2.08rem;
+      }
+
+      .headline h1 {
+        font-size: 1.36rem;
+      }
+
+      .lead {
+        font-size: 0.8rem;
+      }
+    }
+
     .reveal.overview [data-animate] {
       opacity: 1 !important;
       visibility: visible !important;
