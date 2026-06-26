@@ -37,15 +37,26 @@
               </p>
 
               <div class="cover-flow" data-animate aria-label="Flujo ejecutivo">
-                <div class="cover-node">Escalafón</div>
-                <div class="cover-link"></div>
-                <div class="cover-node">PIT</div>
-                <div class="cover-link"></div>
-                <div class="cover-node">Planilla</div>
-                <div class="cover-link"></div>
-                <div class="cover-node">Contabilidad</div>
-                <div class="cover-link"></div>
-                <div class="cover-node">Planificación</div>
+                <div class="cover-sequence">
+                  <div class="cover-node cover-node-escalafon">Escalafón</div>
+                  <div class="cover-link"></div>
+                  <div class="cover-node cover-node-pit">PIT</div>
+                  <div class="cover-link"></div>
+                  <div class="cover-node cover-node-planilla">Planilla</div>
+                </div>
+                <div
+                  class="cover-branch"
+                  aria-label="Salidas paralelas desde Planilla"
+                >
+                  <div class="cover-branch-options">
+                    <div class="cover-node cover-node-contabilidad">
+                      Contabilidad
+                    </div>
+                    <div class="cover-node cover-node-planificacion">
+                      Planificación
+                    </div>
+                  </div>
+                </div>
               </div>
             </main>
           </div>
