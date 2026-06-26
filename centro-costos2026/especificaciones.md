@@ -104,6 +104,7 @@ Enfoque:
 
 - Escalafon concentra informacion laboral del trabajador.
 - La informacion debe estar actualizada a tiempo para planificar bien el PIT y distribuir correctamente en Planilla.
+- Visualmente debe mostrarse que Escalafon alimenta dos puntos: **PIT** y **Planilla**, usando dos flechas o conectores equivalentes hacia esos badges.
 - Ejemplos de datos relevantes: cargo, dependencia, modalidad, dedicacion, estamento, categoria y horas de trabajo.
 - Si un docente tiene informacion laboral desactualizada, la planificacion y la distribucion pierden precision.
 
