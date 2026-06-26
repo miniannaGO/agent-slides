@@ -8,6 +8,8 @@ const themeToggle = document.querySelector("[data-theme-toggle]");
 const THEME_STORAGE_KEY = "centro-costos2026-theme";
 let fallbackIndex = 0;
 let resizeTimer = 0;
+let lastWheelNavigation = 0;
+const WHEEL_NAVIGATION_COOLDOWN = 120;
 
 function readSavedTheme() {
   try {
@@ -139,7 +141,15 @@ function animateSlide(slide) {
 }
 
 function keepOverviewVisible() {
-  document.querySelectorAll("[data-animate]").forEach((item) => {
+  const animatedItems = document.querySelectorAll("[data-animate]");
+  if (window.gsap) {
+    gsap.killTweensOf(animatedItems);
+    gsap.set(animatedItems, {
+      autoAlpha: 1,
+      clearProps: "transform,scale,rotate,rotateX,y",
+    });
+  }
+  animatedItems.forEach((item) => {
     item.style.opacity = "1";
     item.style.visibility = "visible";
     item.style.transform = "none";
@@ -201,6 +211,39 @@ function step(delta) {
   }
 }
 
+function isOverviewActive() {
+  const reveal = document.querySelector(".reveal");
+  return Boolean(reveal && reveal.classList.contains("overview"));
+}
+
+function handleWheelNavigation(event) {
+  if (event.ctrlKey) return;
+
+  const deltaMultiplier =
+    event.deltaMode === WheelEvent.DOM_DELTA_LINE
+      ? 16
+      : event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+        ? window.innerHeight
+        : 1;
+  const deltaY = event.deltaY * deltaMultiplier;
+  const deltaX = event.deltaX * deltaMultiplier;
+  const dominantDelta = Math.abs(deltaY) >= Math.abs(deltaX) ? deltaY : deltaX;
+
+  if (Math.abs(dominantDelta) < 18) return;
+
+  event.preventDefault();
+  const now = Date.now();
+  if (now - lastWheelNavigation < WHEEL_NAVIGATION_COOLDOWN) return;
+
+  lastWheelNavigation = now;
+  step(dominantDelta > 0 ? 1 : -1);
+
+  if (isOverviewActive()) {
+    keepOverviewVisible();
+    window.requestAnimationFrame(keepOverviewVisible);
+  }
+}
+
 document
   .querySelector("[data-nav='prev']")
   .addEventListener("click", () => step(-1));
@@ -213,6 +256,7 @@ dots.forEach((dot) => {
 if (themeToggle) {
   themeToggle.addEventListener("click", toggleTheme);
 }
+window.addEventListener("wheel", handleWheelNavigation, { passive: false });
 
 document.querySelectorAll(".flow-node").forEach((node) => {
   node.addEventListener("click", () => {
@@ -264,7 +308,10 @@ if (window.Reveal) {
     updateUi(0);
   });
   Reveal.on("slidechanged", (event) => updateUi(event.indexh || 0));
-  Reveal.on("overviewshown", keepOverviewVisible);
+  Reveal.on("overviewshown", () => {
+    keepOverviewVisible();
+    window.requestAnimationFrame(keepOverviewVisible);
+  });
   Reveal.on("overviewhidden", () => updateUi(Reveal.getIndices().h || 0));
 } else {
   document.documentElement.classList.add("fallback");

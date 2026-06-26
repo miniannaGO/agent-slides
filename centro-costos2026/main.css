@@ -4726,10 +4726,188 @@ html[data-theme="dark"] .nav-btn:hover {
   transform: none !important;
 }
 
-.reveal.overview ~ .deck-ui,
-.reveal.overview ~ .progress-rail {
-  opacity: 0;
+.reveal.overview .slides > section {
+  display: grid !important;
+  place-items: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: hidden !important;
+  background: var(--paper) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(17, 21, 29, 0.08),
+    0 18px 40px rgba(15, 23, 42, 0.14) !important;
+}
+
+.reveal.overview .slides > section::before {
+  opacity: 1 !important;
+}
+
+html[data-theme="light"] .reveal.overview .slides > section.slide-cover {
+  background: #f8fbfc !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="light"] .reveal.overview .slide-cover .cover-content h1,
+html[data-theme="light"] .reveal.overview .slide-cover .cover-node strong {
+  color: var(--ink) !important;
+}
+
+html[data-theme="light"] .reveal.overview .slide-cover .cover-content h1 span {
+  color: var(--teal) !important;
+}
+
+html[data-theme="light"] .reveal.overview .slide-cover .cover-content p {
+  color: #293444 !important;
+}
+
+html[data-theme="dark"] .reveal.overview .slides > section.slide-cover {
+  background: #11151d !important;
+  color: var(--white) !important;
+}
+
+html[data-theme="dark"] .reveal.overview .slide-cover .cover-content h1,
+html[data-theme="dark"] .reveal.overview .slide-cover .cover-node strong {
+  color: var(--white) !important;
+}
+
+html[data-theme="dark"] .reveal.overview .slide-cover .cover-content h1 span {
+  color: var(--amber) !important;
+}
+
+html[data-theme="dark"] .reveal.overview .slide-cover .cover-content p {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.reveal.overview .slide-shell,
+.reveal.overview .cover-shell {
+  width: min(100%, 1440px) !important;
+  height: min(100%, 820px) !important;
+  max-height: 820px !important;
+  min-height: 0 !important;
+  margin: 0 auto !important;
+  transform: none !important;
+}
+
+.reveal.overview .slide-shell {
+  display: grid !important;
+  grid-template-rows: auto 1fr !important;
+  align-content: stretch !important;
+}
+
+.reveal.overview .cover-shell {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(390px, 430px) !important;
+  align-items: center !important;
+}
+
+.reveal.overview .slide-top {
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  min-height: 148px !important;
+  padding-right: 0 !important;
+}
+
+.reveal.overview .stage,
+.reveal.overview .split,
+.reveal.overview .escalafon-layout,
+.reveal.overview .planilla-layout,
+.reveal.overview .visor-layout,
+.reveal.overview .accounting-layout,
+.reveal.overview .flow-layout,
+.reveal.overview .closing-layout {
+  height: 100% !important;
+  min-height: 0 !important;
+}
+
+.reveal.overview .split,
+.reveal.overview .escalafon-layout,
+.reveal.overview .planilla-layout,
+.reveal.overview .visor-layout,
+.reveal.overview .closing-layout {
+  align-items: center !important;
+}
+
+.reveal.overview .split {
+  grid-template-columns: 0.95fr 1.05fr !important;
+}
+
+.reveal.overview .slide-escalafon .escalafon-layout {
+  grid-template-columns: 0.92fr 1.08fr !important;
+}
+
+.reveal.overview .planilla-layout {
+  grid-template-columns: 1.05fr 0.95fr !important;
+}
+
+.reveal.overview .visor-layout {
+  grid-template-columns: 0.9fr 1.1fr !important;
+}
+
+.reveal.overview .closing-layout {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+.reveal.overview .accounting-handoff {
+  grid-template-columns: minmax(0, 1fr) 72px minmax(220px, 1.1fr) 72px minmax(0, 1fr) !important;
+}
+
+.reveal.overview .labor-source {
+  min-height: 440px !important;
+}
+
+.reveal.overview .flow-map {
+  min-height: 440px !important;
+}
+
+.reveal.overview .flow-lines {
+  display: block !important;
+}
+
+.reveal.overview .flow-node {
+  position: absolute !important;
+  width: 220px !important;
+  min-height: 138px !important;
+  padding: 18px !important;
+}
+
+.reveal.overview .node-pit {
+  left: 7% !important;
+  top: 38% !important;
+}
+
+.reveal.overview .node-planilla {
+  left: 39% !important;
+  top: 38% !important;
+}
+
+.reveal.overview .node-conta {
+  right: 7% !important;
+  top: 14% !important;
+  bottom: auto !important;
+}
+
+.reveal.overview .node-presupuesto {
+  right: 7% !important;
+  top: auto !important;
+  bottom: 12% !important;
+}
+
+.reveal.overview .present {
+  outline: 0 !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(17, 21, 29, 0.22),
+    0 18px 40px rgba(15, 23, 42, 0.18) !important;
+}
+
+.reveal.overview ~ .deck-ui {
+  z-index: 80;
+  opacity: 1;
   pointer-events: none;
+}
+
+.reveal.overview ~ .progress-rail {
+  z-index: 79;
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {

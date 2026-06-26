@@ -32,8 +32,10 @@ Reglas obligatorias:
 - No descargar dependencias locales salvo que el usuario lo pida explicitamente.
 - Cada presentacion debe comportarse bien en escritorio, tablet y mobile.
 - La navegacion debe funcionar con teclado: flechas derecha, izquierda, arriba y abajo.
+- La navegacion debe funcionar tambien con rueda del mouse en escritorio, tanto en vista normal como en preview/overview cuando aplique, con control de repeticion suficiente para evitar saltos multiples sin volver lenta la respuesta.
 - Cada presentacion debe tener un contador visible y accesos directos a cada diapositiva. La numeracion visible debe iniciar en 1, incluyendo caratula si existe; nunca usar `00` como numero de diapositiva.
 - Los accesos directos a diapositivas, dots o controles equivalentes deben actualizarse cuando se agreguen, eliminen o reordenen diapositivas.
+- Los controles fijos de navegacion del deck, como `deck-ui` o equivalentes, deben permanecer visibles y funcionales tambien durante el preview/overview de miniaturas.
 - Cada proyecto nuevo o modificado para diapositivas debe construirse y mantenerse con soporte funcional de light mode y dark mode, incluyendo un control visible para alternar el tema y persistencia de la preferencia cuando aplique.
 - Si la especificacion define una cantidad de diapositivas, conservar exactamente esa cantidad de diapositivas principales.
 
