@@ -12,7 +12,7 @@ La nueva distribucion funciona como una cadena de informacion por instantes. Cad
 
 La explicacion debe insistir en la idea de avance por tramos, como un flujo continuo:
 
-**PIT actualizado -> Planilla cerrada -> Distribucion de planilla -> Contabilidad -> Presupuesto / Planificacion -> Giros y pago**
+**PIT actualizado -> Planilla cerrada -> Distribucion de planilla -> Contabilidad -> Presupuesto / Planificacion**
 
 ## Procesos macro involucrados
 
@@ -82,7 +82,7 @@ Enfoque:
 
 - Debe ser muy llamativa visualmente.
 - Debe mostrar de inmediato el nombre del cambio: **Nueva Distribucion Contable y Presupuestal**.
-- Debe sugerir el flujo institucional sin entrar todavia al detalle: PIT, Planilla, Contabilidad, Planificacion y Giros.
+- Debe sugerir el flujo institucional sin entrar todavia al detalle: PIT, Planilla, Contabilidad y Planificacion.
 - Debe sentirse como una presentacion CEO, no como una pantalla operativa.
 
 Frase sugerida: **Un solo flujo institucional para cerrar bien y pagar a tiempo.**
@@ -161,7 +161,6 @@ Enfoque:
 - Empadronamiento existente bien gobernado por tipo de pago, estamento Y/O modalidad del trabajador.
 - Planillas cerradas y redistribuidas cuando haya cambios.
 - Contabilidad valida antes del cierre.
-- Giros puede pagar a los trabajadores de la Institucion solo si Contabilidad confirma que la distribucion esta correcta.
 
 Frase sugerida: **Trabajo coordinado y a tiempo: la condicion para cerrar bien y pagar a tiempo.**
 

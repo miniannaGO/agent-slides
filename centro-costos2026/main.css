@@ -86,6 +86,18 @@
       background: var(--slide-accent, var(--teal));
     }
 
+    .reveal .slides > section:not(.slide-cover)::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 8px;
+      right: 0;
+      width: min(22vw, 310px);
+      height: calc(100% - 8px);
+      background: var(--slide-tint, transparent);
+      pointer-events: none;
+    }
+
     .reveal .slides > section.present,
     html.fallback .reveal .slides > section.fallback-visible {
       display: grid !important;
@@ -182,22 +194,27 @@
 
     .slide-pit {
       --slide-accent: var(--teal);
+      --slide-tint: rgba(0, 168, 157, 0.08);
     }
 
     .slide-planilla {
       --slide-accent: var(--amber);
+      --slide-tint: rgba(245, 184, 65, 0.11);
     }
 
     .slide-presupuesto {
       --slide-accent: var(--violet);
+      --slide-tint: rgba(117, 87, 230, 0.09);
     }
 
     .slide-flow {
       --slide-accent: var(--cyan);
+      --slide-tint: rgba(40, 185, 255, 0.08);
     }
 
     .slide-close {
       --slide-accent: var(--green);
+      --slide-tint: rgba(79, 186, 111, 0.09);
     }
 
     .slide-cover {
@@ -381,6 +398,11 @@
       --cover-node-bg: rgba(117, 87, 230, 0.18);
     }
 
+    .cover-node:nth-child(9) {
+      --cover-node-color: var(--green);
+      --cover-node-bg: rgba(79, 186, 111, 0.18);
+    }
+
     .cover-link {
       flex: 1 1 30px;
       min-width: 28px;
@@ -446,6 +468,7 @@
     }
 
     .signal-card {
+      --card-accent: var(--teal);
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 15px;
@@ -453,6 +476,7 @@
       min-height: 94px;
       padding: 18px;
       border: 1px solid rgba(17, 21, 29, 0.1);
+      border-top: 4px solid var(--card-accent);
       border-radius: 8px;
       background: var(--surface);
       box-shadow: none;
@@ -480,11 +504,20 @@
     }
 
     .signal-card:nth-child(2) .signal-icon {
+      --card-accent: var(--amber);
       background: var(--amber);
+    }
+
+    .signal-card:nth-child(2) {
+      --card-accent: var(--amber);
     }
 
     .signal-card:nth-child(3) .signal-icon {
       background: var(--violet);
+    }
+
+    .signal-card:nth-child(3) {
+      --card-accent: var(--violet);
     }
 
     .signal-card h3 {
@@ -885,6 +918,7 @@
       min-height: 138px;
       padding: 18px;
       border: 1px solid rgba(17, 21, 29, 0.12);
+      border-top: 4px solid rgba(var(--node-rgb), 0.92);
       border-radius: 8px;
       background: var(--surface);
       color: var(--ink);
@@ -957,11 +991,21 @@
     }
 
     .caption-item {
+      --card-accent: var(--cyan);
       min-height: 76px;
       padding: 16px;
       border: 1px solid var(--line);
+      border-top: 4px solid var(--card-accent);
       border-radius: 8px;
       background: var(--surface);
+    }
+
+    .caption-item:nth-child(2) {
+      --card-accent: var(--amber);
+    }
+
+    .caption-item:nth-child(3) {
+      --card-accent: var(--teal);
     }
 
     .caption-item strong {
@@ -995,6 +1039,7 @@
     }
 
     .commitment {
+      --card-accent: var(--cyan);
       display: grid;
       grid-template-columns: 72px 1fr;
       gap: 16px;
@@ -1003,6 +1048,7 @@
       padding: 16px;
       border-radius: 8px;
       border: 1px solid rgba(17, 21, 29, 0.1);
+      border-top: 4px solid var(--card-accent);
       background: var(--surface);
       box-shadow: none;
     }
@@ -1024,16 +1070,29 @@
     }
 
     .commitment:nth-child(2) .mark {
+      --card-accent: var(--amber);
       background: var(--amber);
       color: var(--ink);
+    }
+
+    .commitment:nth-child(2) {
+      --card-accent: var(--amber);
     }
 
     .commitment:nth-child(3) .mark {
       background: var(--teal);
     }
 
+    .commitment:nth-child(3) {
+      --card-accent: var(--teal);
+    }
+
     .commitment:nth-child(4) .mark {
       background: var(--violet);
+    }
+
+    .commitment:nth-child(4) {
+      --card-accent: var(--violet);
     }
 
     .commitment strong {
@@ -1613,6 +1672,12 @@
       box-shadow: none;
     }
 
+    html[data-theme="dark"] .signal-card,
+    html[data-theme="dark"] .caption-item,
+    html[data-theme="dark"] .commitment {
+      border-top-color: var(--card-accent);
+    }
+
     html[data-theme="dark"] .dashboard,
     html[data-theme="dark"] .snapshot-panel {
       background: var(--surface);
@@ -1628,6 +1693,7 @@
 
     html[data-theme="dark"] .flow-node {
       border-color: rgba(var(--node-rgb), 0.52);
+      border-top-color: rgba(var(--node-rgb), 0.92);
       background: var(--surface-soft);
       color: var(--white);
       box-shadow: none;
