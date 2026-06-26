@@ -32,6 +32,7 @@ Reglas obligatorias:
 - No descargar dependencias locales salvo que el usuario lo pida explicitamente.
 - Cada presentacion debe comportarse bien en escritorio, tablet y mobile.
 - La navegacion debe funcionar con teclado: flechas derecha, izquierda, arriba y abajo.
+- No habilitar hotkeys adicionales de la libreria de presentacion salvo pedido explicito. Por defecto solo deben quedar activos `Escape`, flechas y rueda del mouse; atajos como `B`, `V`, `G`, `F`, espacio, pagina arriba/abajo u otros deben anularse si la libreria los activa.
 - La navegacion debe funcionar tambien con rueda del mouse en escritorio, tanto en vista normal como en preview/overview cuando aplique, con control de repeticion suficiente para evitar saltos multiples sin volver lenta la respuesta.
 - Cada presentacion debe tener un contador visible y accesos directos a cada diapositiva. La numeracion visible debe iniciar en 1, incluyendo caratula si existe; nunca usar `00` como numero de diapositiva.
 - Los accesos directos a diapositivas, dots o controles equivalentes deben actualizarse cuando se agreguen, eliminen o reordenen diapositivas.

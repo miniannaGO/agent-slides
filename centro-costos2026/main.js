@@ -10,6 +10,13 @@ let fallbackIndex = 0;
 let resizeTimer = 0;
 let lastWheelNavigation = 0;
 const WHEEL_NAVIGATION_COOLDOWN = 55;
+const ALLOWED_DECK_KEYS = new Set([
+  "Escape",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowUp",
+  "ArrowDown",
+]);
 
 function readSavedTheme() {
   try {
@@ -245,6 +252,28 @@ function handleWheelNavigation(event) {
   }
 }
 
+function isInteractiveTarget(target) {
+  return Boolean(
+    target &&
+      target.closest &&
+      target.closest(
+        "button, a, input, select, textarea, [contenteditable='true'], [role='button'], [role='tab']",
+      ),
+  );
+}
+
+function handleDeckHotkeys(event) {
+  if (event.ctrlKey || event.metaKey || event.altKey) return;
+  if (ALLOWED_DECK_KEYS.has(event.key)) return;
+
+  const isControlKey =
+    event.key === "Tab" || event.key === "Enter" || event.key === " ";
+  if (isControlKey && isInteractiveTarget(event.target)) return;
+
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}
+
 document
   .querySelector("[data-nav='prev']")
   .addEventListener("click", () => step(-1));
@@ -257,6 +286,7 @@ dots.forEach((dot) => {
 if (themeToggle) {
   themeToggle.addEventListener("click", toggleTheme);
 }
+window.addEventListener("keydown", handleDeckHotkeys, true);
 window.addEventListener("wheel", handleWheelNavigation, { passive: false });
 
 document.querySelectorAll(".flow-node").forEach((node) => {
