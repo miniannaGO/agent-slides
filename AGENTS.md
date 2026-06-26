@@ -39,7 +39,9 @@ Reglas obligatorias:
 - Usar animaciones llamativas solo cuando ayuden a entender el flujo o la prioridad del mensaje.
 - Evitar saturar las pantallas con texto.
 - Evitar estetica generica de IA: no abusar de gradientes suaves, brillos, halos, orbes o fondos decorativos que no aporten lectura ejecutiva.
+- Evitar reticulas, fondos o acentos construidos con `linear-gradient`/`radial-gradient` como decoracion. Si se necesita patron visual, usar bandas, rieles, divisores o bloques planos con color intencional.
 - Dar presencia colorida con recursos controlados: franjas, acentos laterales, bloques de color, lineas de estado y codificacion por rol. No convertir la presentacion en un carnaval cromatico.
+- Evitar `border-left` como acento dominante en cards o paneles; suele verse como plantilla generica. Preferir color en iconos, tags, numeros, bandas superiores discretas, divisores o estados internos.
 - En presentaciones CEO, priorizar composicion sobria, jerarquia fuerte, contraste claro y superficies planas con color intencional.
 - Evitar tarjetas dentro de tarjetas. Si un panel contiene elementos internos, preferir filas, divisores, rieles, bandas o listas estructuradas antes que multiples cards anidadas.
 - Los numeros de pagina deben vivir en la navegacion fija inferior o en una zona de sistema equivalente, no dentro del contenido principal de cada diapositiva.
