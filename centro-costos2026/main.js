@@ -9,7 +9,7 @@ const THEME_STORAGE_KEY = "centro-costos2026-theme";
 let fallbackIndex = 0;
 let resizeTimer = 0;
 let lastWheelNavigation = 0;
-const WHEEL_NAVIGATION_COOLDOWN = 120;
+const WHEEL_NAVIGATION_COOLDOWN = 55;
 
 function readSavedTheme() {
   try {
@@ -218,6 +218,7 @@ function isOverviewActive() {
 
 function handleWheelNavigation(event) {
   if (event.ctrlKey) return;
+  const isPreview = isOverviewActive();
 
   const deltaMultiplier =
     event.deltaMode === WheelEvent.DOM_DELTA_LINE
@@ -238,7 +239,7 @@ function handleWheelNavigation(event) {
   lastWheelNavigation = now;
   step(dominantDelta > 0 ? 1 : -1);
 
-  if (isOverviewActive()) {
+  if (isPreview) {
     keepOverviewVisible();
     window.requestAnimationFrame(keepOverviewVisible);
   }
