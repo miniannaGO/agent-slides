@@ -206,7 +206,7 @@
                   <div class="scan-line"></div>
                   <div class="record-card">
                     <div>
-                      <strong>REGISTRO</strong>
+                      <strong>DISTRIBUCIÓN</strong>
                     </div>
                   </div>
                 </div>
@@ -214,6 +214,84 @@
                   Contabilidad trabaja con el último registro válido; no
                   redistribuye. Si Planilla cambia, Planilla entrega una nueva
                   distribución.
+                </p>
+              </aside>
+            </main>
+          </div>
+        </section>
+
+        <section
+          class="slide slide-contabilidad"
+          data-title="Contabilidad"
+          data-transition="convex"
+        >
+          <div class="slide-shell container-xxl">
+            <header class="slide-top">
+              <div class="headline">
+                <div class="kicker" data-animate>Contabilidad</div>
+                <h1 data-animate>
+                  Contabilidad confirma el pago con la
+                  <span class="accent">distribución vigente</span>.
+                </h1>
+                <p class="lead" data-animate>
+                  Antes confirmaba planillas para completar el pago hasta el
+                  trabajador; ahora lo hace con la información distribuida por
+                  Planilla.
+                </p>
+              </div>
+            </header>
+
+            <main class="stage visor-layout">
+              <div class="panel dashboard" data-animate>
+                <article
+                  class="indicator"
+                  style="--value: 84%; --bar: var(--teal)"
+                >
+                  <strong>Recibe</strong>
+                  <span
+                    >Trabaja con la última distribución válida emitida por
+                    Planilla.</span
+                  >
+                  <em>01</em>
+                </article>
+                <article
+                  class="indicator"
+                  style="--value: 74%; --bar: var(--cyan)"
+                >
+                  <strong>Confirma</strong>
+                  <span
+                    >Visualiza las cuentas contables correctas para confirmar la
+                    distribución.</span
+                  >
+                  <em>02</em>
+                </article>
+                <article
+                  class="indicator"
+                  style="--value: 66%; --bar: var(--amber)"
+                >
+                  <strong>Contabiliza</strong>
+                  <span
+                    >Valida el nuevo centro de costos y completa el flujo de
+                    pago.</span
+                  >
+                  <em>03</em>
+                </article>
+              </div>
+
+              <aside class="panel record-board" data-animate>
+                <h3>Mismo control contable, nueva base distribuida.</h3>
+                <div class="control-frame">
+                  <div class="scan-line"></div>
+                  <div class="record-card">
+                    <div>
+                      <strong>CUENTAS</strong>
+                      <span>cuenta contable + centro de costos</span>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  Si Planilla redistribuye, Contabilidad confirma el pago con
+                  ese nuevo registro.
                 </p>
               </aside>
             </main>
@@ -305,8 +383,8 @@
                   <span class="accent">cierre alineado</span>.
                 </h1>
                 <p class="lead" data-animate>
-                  PIT prepara el dato, Planilla distribuye, Contabilidad valida
-                  y Presupuesto da seguimiento.
+                  PIT prepara el dato, Planilla distribuye, Contabilidad
+                  confirma y Presupuesto da seguimiento.
                 </p>
               </div>
             </header>
@@ -360,7 +438,10 @@
                 <article class="flow-node node-conta" tabindex="0">
                   <span class="tag">Nodo final</span>
                   <strong>Contabilidad</strong>
-                  <span>Valida centro de costos y cuentas calculadas.</span>
+                  <span
+                    >Visualiza cuentas y valida el centro de costos para el
+                    pago.</span
+                  >
                 </article>
 
                 <article class="flow-node node-presupuesto" tabindex="0">
@@ -459,7 +540,9 @@
                   </div>
                   <div class="pay-step" style="--step-color: var(--teal)">
                     <b>C</b
-                    ><span>Contabilidad valida para cerrar con confianza.</span>
+                    ><span
+                      >Contabilidad confirma para cerrar con confianza.</span
+                    >
                   </div>
                 </div>
                 <div class="final-call">
@@ -515,6 +598,12 @@
             type="button"
             data-jump="5"
             aria-label="Ir a diapositiva 5"
+          ></button>
+          <button
+            class="dot"
+            type="button"
+            data-jump="6"
+            aria-label="Ir a diapositiva 6"
           ></button>
         </div>
       </div>

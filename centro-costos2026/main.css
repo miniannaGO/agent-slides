@@ -208,6 +208,11 @@
       --slide-tint: rgba(245, 184, 65, 0.11);
     }
 
+    .slide-contabilidad {
+      --slide-accent: var(--green);
+      --slide-tint: rgba(79, 186, 111, 0.09);
+    }
+
     .slide-presupuesto {
       --slide-accent: var(--violet);
       --slide-tint: rgba(117, 87, 230, 0.09);
@@ -1216,6 +1221,7 @@
       }
 
       .slide-planilla .slide-shell,
+      .slide-contabilidad .slide-shell,
       .slide-presupuesto .slide-shell,
       .slide-flow .slide-shell {
         grid-template-rows: auto auto;
@@ -1224,6 +1230,7 @@
       }
 
       .slide-planilla .slide-top,
+      .slide-contabilidad .slide-top,
       .slide-presupuesto .slide-top,
       .slide-flow .slide-top {
         min-height: 126px;
@@ -1259,6 +1266,8 @@
 
       .slide-planilla .stage,
       .slide-planilla .planilla-layout,
+      .slide-contabilidad .stage,
+      .slide-contabilidad .visor-layout,
       .slide-presupuesto .stage,
       .slide-presupuesto .visor-layout,
       .slide-flow .stage,
@@ -1268,10 +1277,16 @@
 
       .slide-planilla .snapshot-panel,
       .slide-planilla .record-board,
+      .slide-contabilidad .dashboard,
+      .slide-contabilidad .record-board,
       .slide-presupuesto .visor-panel,
       .slide-presupuesto .dashboard,
       .slide-flow .flow-map {
         min-height: 0;
+      }
+
+      .slide-contabilidad .control-frame {
+        min-height: 220px;
       }
 
       .slide-flow .flow-map {

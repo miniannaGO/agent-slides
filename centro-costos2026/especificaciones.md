@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Crear una presentacion con una caratula inicial y 5 diapositivas de contenido para explicar, a nivel totalmente gerencial entre CEOs, el flujo de un cambio de software orientado a la actualizacion de la **Nueva Distribucion Contable y Presupuestal** de las **dependencias** de la Institucion: oficinas, facultades y escuelas.
+Crear una presentacion con una caratula inicial y 6 diapositivas de contenido para explicar, a nivel totalmente gerencial entre CEOs, el flujo de un cambio de software orientado a la actualizacion de la **Nueva Distribucion Contable y Presupuestal** de las **dependencias** de la Institucion: oficinas, facultades y escuelas.
 
 La explicacion debe reducir resistencia al cambio. Debe ser concisa, visual, intuitiva, manipulable y orientada a decision ejecutiva, no tecnica. El mensaje central es que la distribucion correcta depende de un trabajo organizado, actualizado y oportuno entre las areas involucradas.
 
@@ -34,9 +34,9 @@ Mensaje ejecutivo: Planilla es el punto operativo que convierte la informacion l
 
 Contabilidad toma como base la informacion distribuida por Planilla, almacenada en tablas de base de datos, para visualizar y confirmar el pago de cada planilla distribuido en cuentas contables.
 
-Contabilidad distribuye y valida su centro de costos con las cuentas contables especificas calculadas desde la distribucion de planilla.
+Contabilidad visualiza la distribucion entregada por Planilla y valida su centro de costos con las cuentas contables especificas calculadas desde la distribucion de planilla.
 
-Mensaje ejecutivo: Contabilidad no debe cerrar con informacion antigua. Si Planilla cambia, Contabilidad necesita una nueva distribucion para cerrar correctamente.
+Mensaje ejecutivo: Contabilidad no debe cerrar con informacion antigua. Si Planilla cambia, Contabilidad necesita la nueva distribucion entregada por Planilla para cerrar correctamente.
 
 ### 4. Presupuesto / Planificacion
 
@@ -116,7 +116,23 @@ Enfoque:
 
 Frase sugerida: **Cerrar no es el final; cerrar bien permite distribuir bien.**
 
-### Diapositiva 3: Presupuesto como visor
+### Diapositiva 3: Contabilidad y centro de costos
+
+Tema: continuidad del rol de Contabilidad al tomar la distribucion generada por Planilla.
+
+Mensaje principal: Contabilidad ya contabilizaba planillas para confirmar la distribucion y completar el flujo de pago de remuneraciones hasta el trabajador. Con la nueva distribucion mantiene ese rol, pero ahora trabaja con la informacion distribuida que Planilla entrega.
+
+Enfoque:
+
+- Contabilidad mantiene su responsabilidad de confirmar la contabilizacion de las planillas dentro del flujo de pago.
+- Contabilidad trabaja sobre la ultima distribucion valida emitida por Planilla.
+- Visualiza las cuentas contables calculadas desde la distribucion de planilla.
+- Usa esa informacion para contabilizar y validar el nuevo centro de costos sin cambiar el rol operativo de Planilla.
+- Si Planilla cambia o redistribuye, Contabilidad debe trabajar con el nuevo registro entregado.
+
+Frase sugerida: **Contabilidad confirma el pago con la distribucion vigente que Planilla entrega.**
+
+### Diapositiva 4: Presupuesto como visor
 
 Tema: rol de Presupuesto.
 
@@ -130,7 +146,7 @@ Enfoque:
 
 Frase sugerida: **Presupuesto mira la calidad del dato; no altera el registro del momento.**
 
-### Diapositiva 4: Flujo visual completo
+### Diapositiva 5: Flujo visual completo
 
 Tema: flujo de informacion desde PIT hasta los nodos finales.
 
@@ -141,7 +157,7 @@ Debe mostrarse visualmente:
 - Nodo intermedio: **Planilla / Remuneraciones**.
 - Accion interna de Planilla: generar, cerrar y distribuir por planilla.
 - Nodo final 1: **Contabilidad**.
-- Accion interna de Contabilidad: validar centro de costos y cuentas contables.
+- Accion interna de Contabilidad: visualizar cuentas contables correctas, confirmar la distribucion y validar el nuevo centro de costos.
 - Nodo final 2: **Planificacion / Presupuesto**.
 - Accion interna de Planificacion / Presupuesto: visualizar indicadores y seguimiento.
 
@@ -149,7 +165,7 @@ Mensaje principal: la informacion avanza por una cadena de responsabilidad. Cada
 
 Frase sugerida: **Una sola cadena: si el registro queda desactualizado, todo el cierre queda desalineado.**
 
-### Diapositiva 5: Conclusiones ejecutivas
+### Diapositiva 6: Conclusiones ejecutivas
 
 Tema: cierre grafico sobre trabajo en equipo, oportunidad y pago.
 
