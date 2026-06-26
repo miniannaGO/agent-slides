@@ -8,7 +8,7 @@ La explicacion debe reducir resistencia al cambio. Debe ser concisa, visual, int
 
 ## Idea central
 
-La nueva distribucion funciona como una cadena de informacion por instantes. Cada area entrega una base para la siguiente. Cuando una planilla se distribuye, el sistema guarda la informacion de ese momento como un **corte de informacion**. Si despues cambia el PIT, el empadronamiento, una planilla o la informacion remunerativa, esos cambios no entran automaticamente en una distribucion ya generada: debe redistribuirse nuevamente.
+La nueva distribucion funciona como una cadena de informacion por instantes. Cada area entrega una base para la siguiente. Cuando una planilla se distribuye, el sistema guarda la informacion de ese momento como un **registro del momento**. Si despues cambia el PIT, el empadronamiento, una planilla o la informacion remunerativa, esos cambios no entran automaticamente en una distribucion ya generada: debe redistribuirse nuevamente.
 
 La explicacion debe insistir en la idea de avance por tramos, como un flujo continuo:
 
@@ -26,7 +26,7 @@ Mensaje ejecutivo: si el PIT no esta administrado, completo y actualizado a tiem
 
 RRHH trabaja directamente desde el sistema de **Remuneraciones**. Cada planilla debe distribuir sus pagos mediante un boton por planilla. Solo una planilla cerrada debe considerarse lista para una distribucion confiable.
 
-La distribucion de planilla guarda la informacion de ese instante como un corte de informacion. Si luego se actualiza informacion remunerativa, se abre o se modifica una planilla, se debe volver a distribuir para que Contabilidad trabaje con informacion actualizada.
+La distribucion de planilla guarda la informacion de ese instante como un registro del momento. Si luego se actualiza informacion remunerativa, se abre o se modifica una planilla, se debe volver a distribuir para que Contabilidad trabaje con informacion actualizada.
 
 Mensaje ejecutivo: Planilla es el punto operativo que convierte la informacion laboral y remunerativa en base distribuible.
 
@@ -65,10 +65,10 @@ La distribucion toma la informacion existente en el instante de ejecucion. No to
 Ejemplos que deben quedar claros:
 
 - Si el PIT cambia despues de generar la planilla o despues de distribuir, los ultimos cambios del PIT no se reflejan automaticamente.
-- Si se cambia la planilla despues de distribuir, Contabilidad seguira viendo el corte anterior hasta que se redistribuya.
+- Si se cambia la planilla despues de distribuir, Contabilidad seguira viendo el registro anterior hasta que se redistribuya.
 - Si se actualiza el empadronamiento despues de distribuir, debe ejecutarse nuevamente la distribucion para que el nuevo criterio impacte.
 
-Mensaje ejecutivo: cada cierre depende del corte correcto en el momento correcto.
+Mensaje ejecutivo: cada cierre depende del registro correcto en el momento correcto.
 
 ## Diapositivas requeridas
 
@@ -128,7 +128,7 @@ Enfoque:
 - Visualiza la distribucion con mejor clasificacion por indicadores.
 - Su funcion es observacion ejecutiva, no recalculo operativo.
 
-Frase sugerida: **Presupuesto mira la calidad del dato; no altera el corte de informacion.**
+Frase sugerida: **Presupuesto mira la calidad del dato; no altera el registro del momento.**
 
 ### Diapositiva 4: Flujo visual completo
 
@@ -147,7 +147,7 @@ Debe mostrarse visualmente:
 
 Mensaje principal: la informacion avanza por una cadena de responsabilidad. Cada nodo necesita que el anterior este cerrado, actualizado y distribuido.
 
-Frase sugerida: **Una sola cadena: si el corte queda desactualizado, todo el cierre queda desalineado.**
+Frase sugerida: **Una sola cadena: si el registro queda desactualizado, todo el cierre queda desalineado.**
 
 ### Diapositiva 5: Conclusiones ejecutivas
 

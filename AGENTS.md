@@ -30,6 +30,7 @@ Reglas obligatorias:
 - No descargar dependencias locales salvo que el usuario lo pida explicitamente.
 - Cada presentacion debe comportarse bien en escritorio, tablet y mobile.
 - La navegacion debe funcionar con teclado: flechas derecha, izquierda, arriba y abajo.
+- Cada proyecto nuevo o modificado para diapositivas debe construirse y mantenerse con soporte funcional de light mode y dark mode, incluyendo un control visible para alternar el tema y persistencia de la preferencia cuando aplique.
 - Si la especificacion define una cantidad de diapositivas, conservar exactamente esa cantidad de diapositivas principales.
 
 ## Criterios visuales para diapositivas
@@ -37,5 +38,10 @@ Reglas obligatorias:
 - Construir presentaciones manipulables, visuales y faciles de aceptar.
 - Usar animaciones llamativas solo cuando ayuden a entender el flujo o la prioridad del mensaje.
 - Evitar saturar las pantallas con texto.
+- Evitar estetica generica de IA: no abusar de gradientes suaves, brillos, halos, orbes o fondos decorativos que no aporten lectura ejecutiva.
+- Dar presencia colorida con recursos controlados: franjas, acentos laterales, bloques de color, lineas de estado y codificacion por rol. No convertir la presentacion en un carnaval cromatico.
+- En presentaciones CEO, priorizar composicion sobria, jerarquia fuerte, contraste claro y superficies planas con color intencional.
+- Evitar tarjetas dentro de tarjetas. Si un panel contiene elementos internos, preferir filas, divisores, rieles, bandas o listas estructuradas antes que multiples cards anidadas.
+- Los numeros de pagina deben vivir en la navegacion fija inferior o en una zona de sistema equivalente, no dentro del contenido principal de cada diapositiva.
 - Comprobar que el contenido no se superponga ni quede cortado en mobile.
 - Mantener cada proyecto autocontenido dentro de su carpeta, excepto por las librerias cargadas via CDN.
