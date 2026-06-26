@@ -880,6 +880,123 @@
       text-align: right;
     }
 
+    .accounting-layout {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 22px;
+      height: 100%;
+      align-items: center;
+    }
+
+    .accounting-handoff {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 72px minmax(220px, 1.1fr) 72px minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+    }
+
+    .accounting-node,
+    .accounting-core {
+      display: grid;
+      align-content: center;
+      min-height: 210px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .accounting-node {
+      gap: 10px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .accounting-node span,
+    .accounting-core span,
+    .accounting-ledger span {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .accounting-node strong {
+      color: var(--ink);
+      font-size: 1.45rem;
+      font-weight: 950;
+      line-height: 1.02;
+    }
+
+    .node-payroll {
+      box-shadow: inset 0 6px 0 var(--amber);
+    }
+
+    .node-payment {
+      box-shadow: inset 0 6px 0 var(--green);
+    }
+
+    .accounting-core {
+      gap: 12px;
+      min-height: 250px;
+      padding: 28px;
+      background: var(--teal);
+      color: var(--white);
+      box-shadow: none;
+    }
+
+    .accounting-core span {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .accounting-core strong {
+      color: var(--white);
+      font-size: 2.65rem;
+      font-weight: 950;
+      line-height: 0.95;
+    }
+
+    .accounting-connector {
+      position: relative;
+      height: 6px;
+      background: var(--amber);
+      border-radius: 999px;
+    }
+
+    .accounting-connector::after {
+      content: "";
+      position: absolute;
+      right: -1px;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      background: var(--amber);
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      transform: translateY(-50%);
+    }
+
+    .accounting-ledger {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .accounting-ledger div {
+      display: grid;
+      gap: 5px;
+      min-height: 76px;
+      align-content: center;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-soft);
+    }
+
+    .accounting-ledger b {
+      color: var(--ink);
+      font-size: 0.96rem;
+      font-weight: 950;
+    }
+
     .flow-layout {
       display: grid;
       height: 100%;
@@ -1277,16 +1394,33 @@
 
       .slide-planilla .snapshot-panel,
       .slide-planilla .record-board,
-      .slide-contabilidad .dashboard,
-      .slide-contabilidad .record-board,
       .slide-presupuesto .visor-panel,
       .slide-presupuesto .dashboard,
       .slide-flow .flow-map {
         min-height: 0;
       }
 
-      .slide-contabilidad .control-frame {
-        min-height: 220px;
+      .slide-contabilidad .accounting-layout {
+        gap: 14px;
+      }
+
+      .slide-contabilidad .accounting-node {
+        min-height: 166px;
+        padding: 18px;
+      }
+
+      .slide-contabilidad .accounting-core {
+        min-height: 196px;
+        padding: 22px;
+      }
+
+      .slide-contabilidad .accounting-core strong {
+        font-size: 2.18rem;
+      }
+
+      .slide-contabilidad .accounting-ledger div {
+        min-height: 62px;
+        padding: 11px 12px;
       }
 
       .slide-flow .flow-map {
@@ -1694,6 +1828,8 @@
     html[data-theme="dark"] .status-row h3,
     html[data-theme="dark"] .indicator strong,
     html[data-theme="dark"] .indicator em,
+    html[data-theme="dark"] .accounting-node strong,
+    html[data-theme="dark"] .accounting-ledger b,
     html[data-theme="dark"] .caption-item strong,
     html[data-theme="dark"] .commitment strong {
       color: #f8fbff;
@@ -1703,6 +1839,8 @@
     html[data-theme="dark"] .signal-card p,
     html[data-theme="dark"] .status-row p,
     html[data-theme="dark"] .indicator span,
+    html[data-theme="dark"] .accounting-node span,
+    html[data-theme="dark"] .accounting-ledger span,
     html[data-theme="dark"] .caption-item span,
     html[data-theme="dark"] .commitment span {
       color: var(--muted);
@@ -1735,6 +1873,12 @@
     html[data-theme="dark"] .dashboard,
     html[data-theme="dark"] .snapshot-panel {
       background: var(--surface);
+    }
+
+    html[data-theme="dark"] .accounting-node,
+    html[data-theme="dark"] .accounting-ledger div {
+      border-color: var(--line);
+      background: var(--surface-soft);
     }
 
     html[data-theme="dark"] .flow-map {
@@ -3708,6 +3852,127 @@
 
       .lead {
         font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 980px), (max-height: 680px) {
+      .accounting-layout {
+        grid-template-rows: auto auto;
+      }
+
+      .accounting-handoff {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .accounting-node,
+      .accounting-core {
+        min-height: 0;
+        padding: 18px;
+      }
+
+      .accounting-core strong {
+        font-size: 2rem;
+      }
+
+      .accounting-connector {
+        width: 6px;
+        height: 22px;
+        justify-self: center;
+      }
+
+      .accounting-connector::after {
+        right: auto;
+        top: auto;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+      }
+
+      .accounting-ledger {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .accounting-layout {
+        gap: 10px;
+      }
+
+      .accounting-node,
+      .accounting-core {
+        padding: 13px;
+      }
+
+      .accounting-node span,
+      .accounting-core span,
+      .accounting-ledger span {
+        font-size: 0.62rem;
+      }
+
+      .accounting-node strong {
+        font-size: 0.98rem;
+      }
+
+      .accounting-core strong {
+        font-size: 1.38rem;
+      }
+
+      .accounting-ledger {
+        gap: 7px;
+      }
+
+      .accounting-ledger div {
+        min-height: 0;
+        padding: 10px;
+      }
+
+      .accounting-ledger b {
+        font-size: 0.78rem;
+      }
+    }
+
+    @media (max-width: 380px) and (max-height: 780px) and (orientation: portrait) {
+      .accounting-node,
+      .accounting-core {
+        padding: 10px;
+      }
+
+      .accounting-node strong {
+        font-size: 0.84rem;
+      }
+
+      .accounting-core strong {
+        font-size: 1.14rem;
+      }
+
+      .accounting-ledger div {
+        padding: 8px;
+      }
+
+      .accounting-ledger b {
+        font-size: 0.66rem;
+      }
+    }
+
+    @media (orientation: landscape) and (max-height: 560px) {
+      .accounting-layout {
+        gap: 10px;
+      }
+
+      .accounting-node,
+      .accounting-core {
+        min-height: 0;
+        padding: 12px;
+      }
+
+      .accounting-core strong {
+        font-size: 1.45rem;
+      }
+
+      .accounting-ledger div {
+        min-height: 0;
+        padding: 8px 10px;
       }
     }
 

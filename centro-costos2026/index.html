@@ -234,66 +234,43 @@
                   <span class="accent">distribución vigente</span>.
                 </h1>
                 <p class="lead" data-animate>
-                  Antes confirmaba planillas para completar el pago hasta el
-                  trabajador; ahora lo hace con la información distribuida por
-                  Planilla.
+                  Mismo rol contable; ahora con base distribuida por Planilla.
                 </p>
               </div>
             </header>
 
-            <main class="stage visor-layout">
-              <div class="panel dashboard" data-animate>
-                <article
-                  class="indicator"
-                  style="--value: 84%; --bar: var(--teal)"
-                >
-                  <strong>Recibe</strong>
-                  <span
-                    >Trabaja con la última distribución válida emitida por
-                    Planilla.</span
-                  >
-                  <em>01</em>
-                </article>
-                <article
-                  class="indicator"
-                  style="--value: 74%; --bar: var(--cyan)"
-                >
-                  <strong>Confirma</strong>
-                  <span
-                    >Visualiza las cuentas contables correctas para confirmar la
-                    distribución.</span
-                  >
-                  <em>02</em>
-                </article>
-                <article
-                  class="indicator"
-                  style="--value: 66%; --bar: var(--amber)"
-                >
-                  <strong>Contabiliza</strong>
-                  <span
-                    >Valida el nuevo centro de costos y completa el flujo de
-                    pago.</span
-                  >
-                  <em>03</em>
-                </article>
+            <main class="stage accounting-layout" data-animate>
+              <div class="accounting-handoff">
+                <div class="accounting-node node-payroll">
+                  <span>Planilla entrega</span>
+                  <strong>Distribución vigente</strong>
+                </div>
+                <div class="accounting-connector" aria-hidden="true"></div>
+                <div class="accounting-core">
+                  <span>Contabilidad</span>
+                  <strong>CONFIRMA</strong>
+                </div>
+                <div class="accounting-connector" aria-hidden="true"></div>
+                <div class="accounting-node node-payment">
+                  <span>Pago</span>
+                  <strong>Hasta el trabajador</strong>
+                </div>
               </div>
 
-              <aside class="panel record-board" data-animate>
-                <h3>Mismo control contable, nueva base distribuida.</h3>
-                <div class="control-frame">
-                  <div class="scan-line"></div>
-                  <div class="record-card">
-                    <div>
-                      <strong>CUENTAS</strong>
-                      <span>cuenta contable + centro de costos</span>
-                    </div>
-                  </div>
+              <div class="accounting-ledger">
+                <div>
+                  <b>Cuenta contable</b>
+                  <span>Correcta</span>
                 </div>
-                <p>
-                  Si Planilla redistribuye, Contabilidad confirma el pago con
-                  ese nuevo registro.
-                </p>
-              </aside>
+                <div>
+                  <b>Centro de costos</b>
+                  <span>Nuevo</span>
+                </div>
+                <div>
+                  <b>Nuevo registro</b>
+                  <span>Si Planilla redistribuye</span>
+                </div>
+              </div>
             </main>
           </div>
         </section>

@@ -21,6 +21,7 @@ Para crear o modificar cualquier `index.html`, `main.css` o `main.js` dentro de 
 
 Reglas obligatorias:
 
+- Antes de cada cambio en un proyecto, revisar y aplicar este `AGENTS.md` raiz y el `especificaciones.md` de la carpeta del proyecto. Ambos gobiernan la modificacion: `AGENTS.md` define reglas globales y `especificaciones.md` define el contenido especifico.
 - No agregar mensajes, procesos, roles, conclusiones o datos que no esten sustentados en el `especificaciones.md` del proyecto.
 - Mantener el enfoque definido por cada especificacion, priorizando claridad, jerarquia visual y lectura rapida.
 - Evitar profundidad tecnica innecesaria cuando la presentacion sea ejecutiva o gerencial.
@@ -38,6 +39,9 @@ Reglas obligatorias:
 - Cada frase debe tener logica ejecutiva clara: sujeto, accion y consecuencia. Evitar slogans simbolicos que suenan bien pero no explican por que importa.
 - Simplificar el contenido sin romper la continuidad: usar pocos conectores utiles (`para`, `cuando`, `si`, `porque`, `por eso`) cuando aclaren causa-efecto con pocas palabras.
 - Priorizar solo las palabras necesarias para decision ejecutiva. Quitar adornos, redundancias o enfasis agresivo, pero no eliminar relaciones clave del `especificaciones.md`.
+- Mantener baja densidad de texto: en exposiciones gerenciales, preferir titulares cortos, etiquetas, palabras clave, numeros y relaciones visuales antes que parrafos extensos.
+- Si una idea necesita mucho texto para entenderse, convertirla en estructura visual breve: flujo, lista de 3 puntos, matriz simple o contraste antes/ahora.
+- Evitar repetir la misma explicacion en titulo, lead, cards y nota final. Cada bloque debe aportar una funcion distinta.
 
 ## Criterios visuales para diapositivas
 
