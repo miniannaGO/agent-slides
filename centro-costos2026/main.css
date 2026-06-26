@@ -779,7 +779,24 @@
     }
 
     .slide-presupuesto .visor-panel {
-      background: #644bd8;
+      background: #eee9ff;
+      color: #2d246c;
+    }
+
+    .slide-presupuesto .lens-ring {
+      border-color: rgba(100, 75, 216, 0.22);
+    }
+
+    .slide-presupuesto .lens-ring::after {
+      background: rgba(100, 75, 216, 0.28);
+    }
+
+    .slide-presupuesto .visor-word {
+      color: #2d246c;
+    }
+
+    .slide-presupuesto .visor-word span {
+      color: rgba(45, 36, 108, 0.7);
     }
 
     .visor-lens {
@@ -942,17 +959,17 @@
       gap: 12px;
       min-height: 250px;
       padding: 28px;
-      background: #24765b;
-      color: var(--white);
+      background: #e1f3e8;
+      color: #123f2e;
       box-shadow: none;
     }
 
     .accounting-core span {
-      color: rgba(255, 255, 255, 0.78);
+      color: rgba(18, 63, 46, 0.72);
     }
 
     .accounting-core strong {
-      color: var(--white);
+      color: #123f2e;
       font-size: 2.65rem;
       font-weight: 950;
       line-height: 0.95;
@@ -972,10 +989,10 @@
       gap: 8px;
       min-height: 38px;
       padding: 9px 13px;
-      border: 1px solid rgba(255, 255, 255, 0.36);
+      border: 1px solid rgba(36, 118, 91, 0.22);
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.14);
-      color: var(--white);
+      background: rgba(36, 118, 91, 0.1);
+      color: #123f2e;
       font-size: 0.72rem;
       font-weight: 950;
       line-height: 1.05;
@@ -987,11 +1004,11 @@
       height: 8px;
       flex: 0 0 auto;
       border-radius: 999px;
-      background: var(--amber);
+      background: #24765b;
     }
 
     .accounting-core-tags b:nth-child(2)::before {
-      background: var(--cyan);
+      background: #4fba6f;
     }
 
     .accounting-connector {
@@ -1890,16 +1907,51 @@
     }
 
     html[data-theme="dark"] .slide-contabilidad .accounting-core {
-      background: #3157d4;
+      background: #24765b;
+      color: var(--white);
+    }
+
+    html[data-theme="dark"] .slide-contabilidad .accounting-core span {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    html[data-theme="dark"] .slide-contabilidad .accounting-core strong {
+      color: var(--white);
     }
 
     html[data-theme="dark"] .slide-contabilidad .accounting-core-tags b {
       border-color: rgba(255, 255, 255, 0.42);
       background: rgba(255, 255, 255, 0.13);
+      color: var(--white);
+    }
+
+    html[data-theme="dark"] .slide-contabilidad .accounting-core-tags b::before {
+      background: #a7efc2;
+    }
+
+    html[data-theme="dark"] .slide-contabilidad .accounting-core-tags b:nth-child(2)::before {
+      background: #69d89a;
     }
 
     html[data-theme="dark"] .slide-presupuesto .visor-panel {
-      background: #007a76;
+      background: #644bd8;
+      color: var(--white);
+    }
+
+    html[data-theme="dark"] .slide-presupuesto .lens-ring {
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+
+    html[data-theme="dark"] .slide-presupuesto .lens-ring::after {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    html[data-theme="dark"] .slide-presupuesto .visor-word {
+      color: var(--white);
+    }
+
+    html[data-theme="dark"] .slide-presupuesto .visor-word span {
+      color: rgba(255, 255, 255, 0.75);
     }
 
     html[data-theme="dark"] .flow-map {
