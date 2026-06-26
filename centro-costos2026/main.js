@@ -30,6 +30,7 @@ function applyTheme(theme, shouldPersist = true) {
   const nextTheme = theme === "dark" ? "dark" : "light";
   const isDark = nextTheme === "dark";
   document.documentElement.dataset.theme = nextTheme;
+  document.documentElement.dataset.bsTheme = nextTheme;
 
   if (themeToggle) {
     const label = isDark ? "Activar modo claro" : "Activar modo oscuro";
