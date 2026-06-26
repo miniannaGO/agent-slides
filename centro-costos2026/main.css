@@ -1021,8 +1021,9 @@ html.fallback .reveal .slides > section.fallback-visible {
 }
 
 .record-board h3 {
-  font-size: 1.35rem;
+  font-size: 1rem;
   font-weight: 950;
+  text-align: center;
 }
 
 .record-board p {
