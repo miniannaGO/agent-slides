@@ -335,8 +335,13 @@ html.fallback .reveal .slides > section.fallback-visible {
 }
 
 .cover-flow {
+  --cover-link-height: clamp(24px, 5vh, 42px);
+  --cover-join-height: clamp(30px, 5vh, 44px);
+  --cover-branch-rail: clamp(16px, 3vh, 22px);
   display: grid;
+  grid-auto-rows: max-content;
   gap: 0;
+  align-content: center;
   align-self: center;
   justify-self: stretch;
   min-height: 620px;
@@ -436,8 +441,7 @@ html.fallback .reveal .slides > section.fallback-visible {
   position: relative;
   justify-self: center;
   width: 4px;
-  height: 42px;
-  margin-block: -1px;
+  height: var(--cover-link-height);
   border-radius: 999px;
   background: rgb(var(--node-rgb));
 }
@@ -455,11 +459,11 @@ html.fallback .reveal .slides > section.fallback-visible {
 }
 
 .cover-link::before {
-  top: -4px;
+  top: -5px;
 }
 
 .cover-link::after {
-  bottom: -4px;
+  bottom: -5px;
 }
 
 .cover-link-pit {
@@ -504,7 +508,7 @@ html.fallback .reveal .slides > section.fallback-visible {
   content: "";
   position: absolute;
   right: calc((100% - var(--branch-gap)) / 4);
-  bottom: -22px;
+  bottom: calc(var(--cover-branch-rail) * -1);
   left: calc((100% - var(--branch-gap)) / 4);
   height: 4px;
   border-radius: 999px;
@@ -514,17 +518,17 @@ html.fallback .reveal .slides > section.fallback-visible {
 .cover-branch .cover-node::after {
   content: "";
   position: absolute;
-  bottom: -22px;
+  bottom: calc(var(--cover-branch-rail) * -1);
   left: calc(50% - 2px);
   width: 4px;
-  height: 22px;
+  height: var(--cover-branch-rail);
   border-radius: 999px;
   background: rgb(var(--node-rgb));
 }
 
 .cover-join {
   position: relative;
-  height: 44px;
+  height: var(--cover-join-height);
 }
 
 .cover-join::before,
@@ -535,7 +539,7 @@ html.fallback .reveal .slides > section.fallback-visible {
 }
 
 .cover-join::before {
-  top: 20px;
+  top: calc(var(--cover-branch-rail) - 2px);
   bottom: 0;
   left: calc(50% - 2px);
   width: 4px;
@@ -543,7 +547,7 @@ html.fallback .reveal .slides > section.fallback-visible {
 }
 
 .cover-join::after {
-  top: 13px;
+  top: calc(var(--cover-branch-rail) - 9px);
   left: calc(50% - 7px);
   width: 14px;
   height: 14px;
@@ -2821,7 +2825,7 @@ html[data-theme="dark"] .nav-btn:hover {
 
   .cover-link {
     display: block;
-    height: 34px;
+    height: var(--cover-link-height);
   }
 
   .cover-branch {
@@ -2881,11 +2885,14 @@ html[data-theme="dark"] .nav-btn:hover {
   }
 
   .cover-flow {
-    gap: 8px;
+    --cover-link-height: clamp(22px, 4.4vh, 34px);
+    --cover-join-height: clamp(28px, 4.8vh, 38px);
+    --cover-branch-rail: clamp(14px, 2.8vh, 20px);
+    gap: 0;
   }
 
   .cover-link {
-    flex: 0 0 24px;
+    height: var(--cover-link-height);
   }
 
   .slide-top {
@@ -3072,6 +3079,9 @@ html[data-theme="dark"] .nav-btn:hover {
 
 @media (max-width: 760px) {
   .cover-flow {
+    --cover-link-height: clamp(20px, 4vh, 30px);
+    --cover-join-height: clamp(26px, 4.4vh, 34px);
+    --cover-branch-rail: clamp(12px, 2.4vh, 18px);
     max-width: 420px;
     min-height: 440px;
   }
@@ -3082,11 +3092,11 @@ html[data-theme="dark"] .nav-btn:hover {
   }
 
   .cover-link {
-    height: 24px;
+    height: var(--cover-link-height);
   }
 
   .cover-join {
-    height: 32px;
+    height: var(--cover-join-height);
   }
 
   .cover-node strong {
@@ -3524,7 +3534,7 @@ html[data-theme="dark"] .nav-btn:hover {
 
   .cover-flow {
     max-width: 100%;
-    gap: 6px;
+    gap: 0;
   }
 
   .cover-node {
@@ -4026,7 +4036,7 @@ html[data-theme="dark"] .nav-btn:hover {
   }
 
   .cover-flow {
-    gap: 6px;
+    gap: 0;
     min-height: 326px;
   }
 
@@ -4382,7 +4392,7 @@ html[data-theme="dark"] .nav-btn:hover {
   }
 
   .cover-flow {
-    gap: 6px;
+    gap: 0;
     padding-top: 0;
   }
 
